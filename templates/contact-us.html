@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<!--Boostrap CSS-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<!--Personal CSS-->
+<link rel="stylesheet" href="css/style.css">
+<!--Fontawesome kit-->
+<script src="https://kit.fontawesome.com/95bc93f676.js" crossorigin="anonymous"></script>
+<!--EmailJs script-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function () {
+emailjs.init("XAx_NGI2tj6CUrx52");
+})();
+</script>
+<!-- / .EmailJs script-->
+</head>
+<body>
+<!-- Header -->
+<header>
+<nav class="navbar navbar-expand-lg navbar-light nav-colour">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<a href="/base.html" class=" navbar-brand the-logo mb-0 top-fixed"> Active<i class="fa-solid fa-bolt"></i>Spring</a>
+<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+<li class="nav-item active">
+<a href="/base.html" class="nav-link hvr-underline-from-center">Home <span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item active">
+<a href="#" class="nav-link hvr-underline-from-center">Saunas and Steam</a>
+</li>
+<li class="nav-item active">
+<a href="#" class="nav-link hvr-underline-from-center">Contact Us</a>
+</li>
+<li class="nav-item active">
+<a href="#" class="nav-link hvr-underline-from-center d-lg-none">Sign In</a>
+</li>
+<li class="nav-item active">
+<a href="#" class="nav-link hvr-underline-from-center d-lg-none">Sign Up</a>
+</li>
+</ul>
+<div id="hide">
+<a href="#" class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign In</a>
+<a href="#" class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign Up</a>
+</div>
+</div>
+</nav>
+</header>
+<!-- / .Header -->
+<section class="container-fluid contact-bg-image">
+<div class="row">
+<div class="col-lg-4">
+<h2> Contact Us</h2>
+<h5>If you have any enquires, please fill out the form and we would be happy to help.</h5>
+</div>
+<div class="col-lg-5 mt-5">
+<form onsubmit="return sendMail(this);">
+<label for="fullname">Name</label>
+<input type="text" name="name" class="form-control" id="fullname" placeholder="name@example.com" required>
+<label for="email">Email</label>
+<input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" required>
+<label for="commentbox">Enquiry or Comment</label>
+<textarea class="form-control" name="commentbox" id="commentbox" rows="10" required></textarea>
+<button type="submit" class="btn enquiry-btn p-1"> Enquire Now</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="container-fluid">
+<div class="navbar navbar-expand-sm ml-auto">
+<div class="ml-auto d-block p-3">
+<h4 class="text-center">Our Social</h4>
+<hr class="mt-0 cl-black">
+<div class="social-media">
+<a href="#" class="foot-link ml-2"><i class="fa-brands fa-square-instagram hvr-bounce-in" target="_blank"></i></i></a>
+<a href="#" class="foot-link ml-2"><i class="fa-brands fa-square-facebook hvr-bounce-in" target="_blank"></i></a>
+<a href="#" class="foot-link ml-2"><i class="fa-brands fa-linkedin hvr-bounce-in" target="_blank"></i></a>
+<a href="#" class="foot-link ml-2"><i class="fa-brands fa-github hvr-bounce-in" target="_blank"></i></a>
+</div>
+</div>
+</div>
+<hr class="mt-0 cl-black">
+<div class="text-center">
+<p> Copyrights 2022</p>
+</div>
+</footer>
+<!--/ .Footer-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+<script src="/js/send-email.js"></script>
+</body>
+</html>
+
+{% endblock content %}
