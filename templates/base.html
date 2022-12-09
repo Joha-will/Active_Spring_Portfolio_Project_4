@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Active-Spring swimming pool</title>
+    <title>{% block title %} Active-Spring swimming pool {% endblock%}</title>
     <!--Boostrap CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -15,6 +15,16 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <!--Fontawesome kit-->
     <script src="https://kit.fontawesome.com/95bc93f676.js" crossorigin="anonymous"></script>
+
+    <!--EmailJs script-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("XAx_NGI2tj6CUrx52");
+        })();
+    </script>
+    <!-- / .EmailJs script-->
 </head>
 
 <body>
@@ -25,19 +35,19 @@
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a href="/base.html" class=" navbar-brand the-logo mb-0 top-fixed"> Active<i
+            <a href="{% url 'webpages:index'%}" class=" navbar-brand the-logo mb-0 top-fixed"> Active<i
                     class="fa-solid fa-bolt"></i>Spring</a>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a href="/templates/booking.html" class="nav-link hvr-underline-from-center">Bookings<span
+                        <a href="{% url 'bookings:booking' %}" class="nav-link hvr-underline-from-center">Bookings<span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a href="#" class="nav-link hvr-underline-from-center">Saunas and Steam</a>
+                        <a href="{% url 'webpages:sauna-steam' %}" class="nav-link hvr-underline-from-center">Saunas and Steam</a>
                     </li>
                     <li class="nav-item active">
-                        <a href="/contact-us.html" class="nav-link hvr-underline-from-center">Contact Us</a>
+                        <a href="{% url 'webpages:contact-us' %}" class="nav-link hvr-underline-from-center">Contact Us</a>
                     </li>
                     <li class="nav-item active">
                         <a href="#" class="nav-link hvr-underline-from-center d-lg-none">Sign In</a>

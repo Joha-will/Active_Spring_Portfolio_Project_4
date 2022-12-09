@@ -1,65 +1,9 @@
 {% extends "base.html" %}
 
+{% block title %} Active-Spring swimming pool {% endblock%}
+
 {% block content %}
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us</title>
-<!--Boostrap CSS-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-<!--Personal CSS-->
-<link rel="stylesheet" href="css/style.css">
-<!--Fontawesome kit-->
-<script src="https://kit.fontawesome.com/95bc93f676.js" crossorigin="anonymous"></script>
-<!--EmailJs script-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-(function () {
-emailjs.init("XAx_NGI2tj6CUrx52");
-})();
-</script>
-<!-- / .EmailJs script-->
-</head>
 <body>
-<!-- Header -->
-<header>
-<nav class="navbar navbar-expand-lg navbar-light nav-colour">
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<a href="/base.html" class=" navbar-brand the-logo mb-0 top-fixed"> Active<i class="fa-solid fa-bolt"></i>Spring</a>
-<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-<li class="nav-item active">
-<a href="/base.html" class="nav-link hvr-underline-from-center">Home <span class="sr-only">(current)</span></a>
-</li>
-<li class="nav-item active">
-<a href="#" class="nav-link hvr-underline-from-center">Saunas and Steam</a>
-</li>
-<li class="nav-item active">
-<a href="#" class="nav-link hvr-underline-from-center">Contact Us</a>
-</li>
-<li class="nav-item active">
-<a href="#" class="nav-link hvr-underline-from-center d-lg-none">Sign In</a>
-</li>
-<li class="nav-item active">
-<a href="#" class="nav-link hvr-underline-from-center d-lg-none">Sign Up</a>
-</li>
-</ul>
-<div id="hide">
-<a href="#" class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign In</a>
-<a href="#" class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign Up</a>
-</div>
-</div>
-</nav>
-</header>
-<!-- / .Header -->
 <section class="container-fluid contact-bg-image">
 <div class="row">
 <div class="col-lg-4">
