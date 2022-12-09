@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <!--Personal CSS-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <!--Fontawesome kit-->
     <script src="https://kit.fontawesome.com/95bc93f676.js" crossorigin="anonymous"></script>
 </head>
@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a href="/base.html" class="nav-link hvr-underline-from-center">Home <span
+                        <a href="/templates/booking.html" class="nav-link hvr-underline-from-center">Bookings<span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
@@ -54,131 +54,13 @@
         </nav>
     </header>
     <!-- / .Header -->
-    <!-- Logo Section-->
-    <section class="container-fluid first-bg-image p-0">
-        <div class="row">
-            <div class="col-lg-8 col-md-12 col-sm-12 text-center">
-                <h1 class="welcome-msg bg-black-op rounded">Welcome to Active-Spring swimming pool
-                    <br>
-                    <span class="welcome-msg mt-0 pg-text">Our pool, along with the facilities and services we offer,
-                        has been ranked among<br>the best in the UK. Book your daily swims today!</span>
-                </h1>
-            </div>
-    </section>
-    <!-- / .Logo Section-->
-    <!-- Pool Ethos (First Article)-->
-    <article class="container-fluid p-0">
-        <blockquote class="blockquote m-0 p-0">
-            <p class="mb-0">"If you haven't failed, you aren't pushing hard enough."</p>
-            <footer class="blockquote-footer">ADAM PEATY</footer>
-        </blockquote>
-        <div class="col-lg-12 col-sm-12 mt-auto mb-auto pool-info">
-            <h3 class="text-center">
-                We at Active-Spring
-            </h3>
-            <small> are aware that maintaining your physical fitness is crucial to leading a happy and healthy
-                life.
-                You may have heard that specialists advise adults to engage in 150 minutes of moderate exercise
-                or 75 minutes of intense exercise per week.
-                Here at Active-Spring, we follow our passions by using swimming to achieve these goals. Swimming
-                is not only fun, but it also has many health benefits.
-                Swimming is an excellent way to work your entire body and cardiovascular system. An hour of
-                swimming burns almost as many calories as running, without
-                all the impact on your bones and joints.
-            </small>
-        </div>
-        </div>
-        </div>
-    </article>
-    <!-- / .Pool Ethos (First Article)-->
-    <!-- Pool Opening Hours (Second Article) -->
-    <article class="container-fluid p-0">
-        <div class="row">
-            <div class="col-lg-4 col-md-3 col-sm-12 mt-auto mb-auto ml-auto">
-                <h4 class="text-center">Pool Opening Hours</h4>
-                <hr class="cl-black">
-                <table class="table table-striped">
-                    <tbody>
-                        <tr>
-                            <td>Monday</td>
-                            <td>08:00</td>
-                            <td> 18:00</td>
-                        </tr>
-                        <tr>
-                            <td>Tuesday</td>
-                            <td>08:00</td>
-                            <td> 18:00</td>
-                        </tr>
-                        <tr>
-                            <td>Wednesday</td>
-                            <td>08:00</td>
-                            <td> 18:00</td>
-                        </tr>
-                        <tr>
-                            <td>Thursday</td>
-                            <td>08:00</td>
-                            <td> 18:00</td>
-                        </tr>
-                        <tr>
-                            <td>Friday</td>
-                            <td>08:00</td>
-                            <td> 18:00</td>
-                        </tr>
-                        <tr>
-                            <td>Saturday</td>
-                            <td>09:00</td>
-                            <td> 18:00</td>
-                        </tr>
-                        <tr>
-                            <td>Sunday</td>
-                            <td>10:00</td>
-                            <td> 16:00</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <hr class="cl-black the-table">
-            </div>
-            <div class="col-lg-5 col-sm-12 mr-auto mt-auto mb-auto">
-                <div class="text-center p-3">
-                    <img src="https://s1.gifyu.com/images/kiana-bosman-qJzjQxJfn-s-unsplash.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </article>
-    <!-- / .Pool Opening Hours (Second Article) -->
+    <main>
 
-    {% block content %}
+        {% block content %}
 
-    {% endblock content %}
+        {% endblock content %}
 
-
-    <!-- Footer -->
-    <footer class="container-fluid">
-        <div class="row">
-            <div id="map">
-                <h4>Our Location</h4>
-            </div>
-            <div class="ml-auto d-block p-3">
-                <h4 class="text-center">Our Social</h4>
-                <hr class="mt-0 cl-black">
-                <div class="social-media">
-                    <a href="#" class="foot-link ml-2"><i class="fa-brands fa-square-instagram hvr-bounce-in"
-                            target="_blank"></i></i></a>
-                    <a href="#" class="foot-link ml-2"><i class="fa-brands fa-square-facebook hvr-bounce-in"
-                            target="_blank"></i></a>
-                    <a href="#" class="foot-link ml-2"><i class="fa-brands fa-linkedin hvr-bounce-in"
-                            target="_blank"></i></a>
-                    <a href="#" class="foot-link ml-2"><i class="fa-brands fa-github hvr-bounce-in"
-                            target="_blank"></i></a>
-                </div>
-            </div>
-        </div>
-        <hr class="mt-0 cl-black">
-        <div class="text-center">
-            <p> Copyrights 2022</p>
-        </div>
-    </footer>
-    <!--/ .Footer-->
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>

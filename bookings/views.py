@@ -1,7 +1,7 @@
-from django.shortcuts import render
-from django.views.generic import ListView
+from django.shortcuts import render, HttpResponse
+from django.views.generic import (TemplateView)
 from .models import Booking
 
-class BookingListView(ListView):
-    model = Booking
+
+class BookingHome(TemplateView):
     template_name = 'booking.html'
