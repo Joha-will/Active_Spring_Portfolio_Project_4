@@ -1,128 +1,150 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');	/** -------------------------------------Padding, Margins, Text, **/
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+/** -------------------------------------Padding, Margins, Text, **/
 body {
-font-family: 'Russo One', sans-serif;
-min-height: 100vh;
-margin: 0;
-padding: 0;
-display: flex;
-flex-direction: column;
+    font-family: 'Russo One', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
+
 header {
-margin: 0;
+    margin: 0;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-margin: 0;
+    margin: 0;
 }
+
 /** -------------------------------------NavBar **/
 .nav-colour {
-background-color: hsl(0,0%,85%);
-padding: 5px;
+    background-color: hsl(0, 0%, 85%);
+    padding: 5px;
 }
+
 .the-logo {
-font-size: 2rem;
-color:  #001435;
+    font-size: 2rem;
+    color: #001435;
 }
+
 .the-logo:hover {
-color: #001435;
-text-decoration: none;
+    color: #001435;
+    text-decoration: none;
 }
+
 .foot-link:hover {
-color: #001435;
-text-decoration: none;
+    color: #001435;
+    text-decoration: none;
 }
+
 .nav-link {
-color: black;
+    color: black;
 }
+
 /* Underline From Center  from Ian Lunn - Front-end Developer*/
 .hvr-underline-from-center {
-display: inline-block;
-vertical-align: middle;
--webkit-transform: perspective(1px) translateZ(0);
-transform: perspective(1px) translateZ(0);
-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-position: relative;
-overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
 }
+
 .hvr-underline-from-center:before {
-content: "";
-position: absolute;
-z-index: -1;
-left: 51%;
-right: 51%;
-bottom: 0;
-background: #2098D1;
-height: 4px;
--webkit-transition-property: left, right;
-transition-property: left, right;
--webkit-transition-duration: 0.3s;
-transition-duration: 0.3s;
--webkit-transition-timing-function: ease-out;
-transition-timing-function: ease-out;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #2098D1;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
 }
-.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
-left: 0;
-right: 0;
+
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;
 }
+
 /* Bounce In */
 .hvr-bounce-in {
-display: inline-block;
-vertical-align: middle;
--webkit-transform: perspective(1px) translateZ(0);
-transform: perspective(1px) translateZ(0);
-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
--webkit-transition-duration: 0.5s;
-transition-duration: 0.5s;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
 }
-.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
--webkit-transform: scale(1.2);
-transform: scale(1.2);
--webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+
+.hvr-bounce-in:hover,
+.hvr-bounce-in:focus,
+.hvr-bounce-in:active {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
+
 /** By Eatmore.io **/
 .register-btn {
-background-color: #2098D1;
-color: whitesmoke;
-background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
-border-radius: .1rem;
-box-sizing: border-box;
-color: #FFFFFF;
-display: flex;
-justify-content: center;
-padding: 1rem 2rem;
-text-decoration: none;
-width: 10%;
-border: 0;
-cursor: pointer;
-user-select: none;
--webkit-user-select: none;
-touch-action: manipulation;
+    background-color: #2098D1;
+    color: whitesmoke;
+    background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+    border-radius: .1rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    width: 10%;
+    border: 0;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
+
 .enquiry-btn {
-background-color: #2098D1;
-color: whitesmoke;
-background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
-border-radius: .1rem;
-box-sizing: border-box;
-color: #FFFFFF;
-display: flex;
-justify-content: center;
-padding: 1rem 2rem;
-text-decoration: none;
-width: 20%;
-border: 0;
-cursor: pointer;
-margin:5px 0;
+    background-color: #2098D1;
+    color: whitesmoke;
+    background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+    border-radius: .1rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    width: 20%;
+    border: 0;
+    cursor: pointer;
+    margin: 5px 0;
 }
+
 @media (min-width: 768px) {
-.button-43 {
-padding: 1rem 2rem;
+    .button-43 {
+        padding: 1rem 2rem;
+    }
 }
-}
+
 /** ------------------------------------- End of NavBar **/
 
 /** ------------------------------------- Logo Section **/
@@ -133,104 +155,124 @@ padding: 1rem 2rem;
     background-size: cover;
     height: 100vh;
     width: 100%;
-    }
-    h1 {
+}
+
+h1 {
     font-size: 2.5rem;
-    }
-    .bg-black-op {
+}
+
+.bg-black-op {
     background-color: #001435;
     opacity: 0.9;
-    }
-    .welcome-msg {
+}
+
+.welcome-msg {
     text-align: center;
     color: white;
     width: fit-content;
     margin-top: 15%;
-    }
-    .welcome-msg span {
-    font-size: 1.2rem;
-    }
-    /** ------------------------------------- End of Logo Section **/
-    /** ------------------------------------- Pool Ethos (First Article) **/
+}
 
-    .pool-info {
-        padding: 1.5rem;
-        border-radius: 5px;
-        width: 100%;
-        font-size: 1.3rem;
-        }
-        .pg-text {
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-        small {
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: larger;
-        }
-        /** Page motivational quotes **/
-        .blockquote {
-        background-color: hsl(0,0%,85%);
-        text-align: center;
-        padding: 2px 0;
-        margin: 0;
-        width: 100%;
-        }
-        /** ------------------------------------- End of Pool Ethos (First Article) **/
-        /** ------------------------------------- Pool Opening Hours (Second Article) **/
-        /* Pool opening hours sections */
-        .table-content {
-        box-shadow: 0 0 15px #001435;
-        }
-        .table-content tbody tr:nth-of-type(even) {
-        background-color: hsl(0,0%,85%) ;
-        }
-        .table-content tbody tr td {
-        font-size: 1em;
-        text-align: center;
-        padding: 5px;
-        }
-        div img {
-        width: 100%;
-        box-shadow: 0 0 5px #001435;
-        }
-        /** ------------------------------------- End of Pool Opening Hours (Second Article) **/
-        /** ------------------------------------- Footer Section **/
-        footer {
-        background-color: hsl(0,0%,85%);
-        }
-        .foot-link {
-        font-size: 1.2rem;
-        color: #001435;
-        border: 1.5px solid #001435;
-        border-radius: 100%;
-        width: 100px;
-        height: 100%;
-        padding: 2px 5px;
-        }
-        /** ------------------------------------- End of Footer Section **/
-        /**------------------ colours **/
-        .cl-black {
-        color: #001435;
-        }
-        .cl-silver {
-        background-color: hsl(0,0%,85%);
-        }
-        hr.cl-black {
-        border: 1px solid #001435;
-        }
-        /*---------------------------- Media queries **/
-        @media screen and (max-width:1075px) {
-        .register-btn {
+.welcome-msg span {
+    font-size: 1.2rem;
+}
+
+/** ------------------------------------- End of Logo Section **/
+/** ------------------------------------- Pool Ethos (First Article) **/
+
+.pool-info {
+    padding: 1.5rem;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.pg-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+small {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+}
+
+/** Page motivational quotes **/
+.blockquote {
+    background-color: hsl(0, 0%, 85%);
+    text-align: center;
+    padding: 2px 0;
+    margin: 0;
+    width: 100%;
+}
+
+/** ------------------------------------- End of Pool Ethos (First Article) **/
+/** ------------------------------------- Pool Opening Hours (Second Article) **/
+/* Pool opening hours sections */
+.table-content {
+    box-shadow: 0 0 15px #001435;
+}
+
+.table-content tbody tr:nth-of-type(even) {
+    background-color: hsl(0, 0%, 85%);
+}
+
+.table-content tbody tr td {
+    font-size: 1em;
+    text-align: center;
+    padding: 5px;
+}
+
+div img {
+    width: 100%;
+    box-shadow: 0 0 5px #001435;
+}
+
+/** ------------------------------------- End of Pool Opening Hours (Second Article) **/
+/** ------------------------------------- Footer Section **/
+footer {
+    background-color: hsl(0, 0%, 85%);
+}
+
+.foot-link {
+    font-size: 1.2rem;
+    color: #001435;
+    border: 1.5px solid #001435;
+    border-radius: 100%;
+    width: 100px;
+    height: 100%;
+    padding: 2px 5px;
+}
+
+/** ------------------------------------- End of Footer Section **/
+/**------------------ colours **/
+.cl-black {
+    color: #001435;
+}
+
+.cl-silver {
+    background-color: hsl(0, 0%, 85%);
+}
+
+hr.cl-black {
+    border: 1px solid #001435;
+}
+
+/*---------------------------- Media queries **/
+@media screen and (max-width:1075px) {
+    .register-btn {
         font-size: 13px;
         padding: 5px;
-        }
-        }
-        @media screen and (max-width:995px) {
-        #hide {
+    }
+}
+
+@media screen and (max-width:995px) {
+    #hide {
         display: none;
-        }
-        }
-        @media screen and (max-width:400px) {
-        .the-logo {
+    }
+}
+
+@media screen and (max-width:400px) {
+    .the-logo {
         font-size: 1.5rem;
-        }
-        }
+    }
+}
