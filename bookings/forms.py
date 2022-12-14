@@ -1,4 +1,10 @@
+from django.forms import ModelForm
 from django import forms
-from .models import Booking
+from bookings.models import Booking
 
 
+class CustomerForm(forms.ModelForm):
+    class Meta:
+        model = Booking
+        fields = '__all__'
+        exclude = ['booked_on', 'booking_id', 'approved']

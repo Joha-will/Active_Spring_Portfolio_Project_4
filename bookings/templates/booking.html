@@ -8,9 +8,9 @@
     <div class="d-flex align-items-center p-4">
         <div class="col-12 col-md-6 col-lg-4 mx-auto">
             <h1 class="text-center">Bookings</h1>
-            {% if booking_list%}
+            {% if customers%}
             <ul>
-                {% for customer in booking_list %}
+                {% for customer in customers %}
                 <li> 
                     {{customer.full_name}}
                 </li>

@@ -1,14 +1,18 @@
-from django.shortcuts import render, HttpResponse
-from django.views.generic import (TemplateView, ListView, CreateView)
+from django.shortcuts import render, redirect, HttpResponse
 from .models import Booking
 from django.contrib import messages
+from bookings.forms import CustomerForm
 
 
 def booking_home(request):
-    return render(request, 'booking.html')
+    customers = Booking.objects.all()
+    context = {
+        'customers': customers,
+    }
+    return render(request, 'booking.html', context)
 
 
-class CreateBooking(CreateView):
-    model = Booking
-    template_name = 'create-booking.html'
-    fields = ['full_name', 'email', 'no_of_persons', 'booking_date_time', 'phone_number']
+def create_booking(request):
+    form = CustomerForm()
+    context = {'form': form}
+    return render(request, 'create-booking.html', context)
