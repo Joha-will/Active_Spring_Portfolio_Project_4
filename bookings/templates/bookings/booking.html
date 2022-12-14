@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %} Active-Spring swimming pool {% endblock%}
+
+{% block content %}
+
+<div class="container-fluid ">
+    <div class="d-flex align-items-center p-4">
+        <div class="col-12 col-md-6 col-lg-4 mx-auto">
+            <h1 class="text-center">Bookings</h1>
+            <div>
+                <a href="{% url 'bookings:create' %}" class="booking-btn text-center m-auto w-100">Make a booking</a>
+            </div>
+            {% if customers%}
+            <table class="table table-striped w-100">
+                <thead>
+                  <tr>
+                    <th scope="col">Booking ID</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Booked On</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for customer in customers %}    
+                  <tr>
+                    <th>{{customer.booking_id}}</th>
+                    <td>{{customer.full_name}}</td>
+                    <td>{{customer.email}}</td>
+                    <td>{{customer.booked_on}}</td>
+                  </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+            {% else %}
+
+            <p>You have no bookings</p>
+
+            {% endif %}
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock content %}

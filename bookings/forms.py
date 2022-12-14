@@ -7,4 +7,4 @@ class CustomerForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = '__all__'
-        exclude = ['booked_on', 'booking_id', 'approved']
+        exclude = ['booked_on', 'approved']

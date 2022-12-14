@@ -9,7 +9,7 @@ def booking_home(request):
     context = {
         'customers': customer,
     }
-    return render(request, 'booking.html', context)
+    return render(request, 'bookings/booking.html', context)
 
 
 def create_booking(request):
@@ -20,10 +20,16 @@ def create_booking(request):
             form.save()
             return redirect('/')
     context = {'form': form}
-    return render(request, 'create-booking.html', context)
+    return render(request, 'bookings/create-booking.html', context)
 
 
-def update_booking(request):
-    form = CustomerForm()
+def update_booking(request, pk):
+    customer = Booking.objects.get(id=pk)
+    form = CustomerForm(instance=customer)
+    if request.method == 'POST':
+        form = CustomerForm(request.POST, instance=customer)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
     context = {'form': form}
-    return render(request, 'update-booking.html', context)
+    return render(request, 'bookings/update-booking.html', context)
