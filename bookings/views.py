@@ -5,14 +5,25 @@ from bookings.forms import CustomerForm
 
 
 def booking_home(request):
-    customers = Booking.objects.all()
+    customer = Booking.objects.all()
     context = {
-        'customers': customers,
+        'customers': customer,
     }
     return render(request, 'booking.html', context)
 
 
 def create_booking(request):
     form = CustomerForm()
+    if request.method == 'POST':
+        form = CustomerForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
     context = {'form': form}
     return render(request, 'create-booking.html', context)
+
+
+def update_booking(request):
+    form = CustomerForm()
+    context = {'form': form}
+    return render(request, 'update-booking.html', context)

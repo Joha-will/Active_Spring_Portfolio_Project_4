@@ -12,7 +12,7 @@
             <ul>
                 {% for customer in customers %}
                 <li> 
-                    {{customer.full_name}}
+                    {{customer.full_name}} <a href="{% url bookings: update-booking %}"> Change/Update Booking</a>
                 </li>
                 {% endfor %}
             </ul>
