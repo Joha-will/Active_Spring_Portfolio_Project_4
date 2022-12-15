@@ -18,16 +18,19 @@
                     <th scope="col">Booking ID</th>
                     <th scope="col">Full Name</th>
                     <th scope="col">Email</th>
+                    <th scope="col">No. Of Perosn</th>
                     <th scope="col">Booked On</th>
                   </tr>
                 </thead>
                 <tbody>
                 {% for customer in customers %}    
                   <tr>
-                    <th>{{customer.booking_id}}</th>
+                    <td>{{customer.booking_id}}</td>
                     <td>{{customer.full_name}}</td>
                     <td>{{customer.email}}</td>
-                    <td>{{customer.booked_on}}</td>
+                    <td>{{customer.no_of_persons}}</td>
+                    <td>{{customer.booked_on}} </td>
+                    <td><a href="{% url 'bookings:update' customer.booking_id %}"> Change booking</a> </td>
                   </tr>
                 {% endfor %}
                 </tbody>
