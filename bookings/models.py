@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from phonenumber_field.modelfields import PhoneNumberField
 import datetime
 
 pool_timings = (
@@ -27,7 +28,7 @@ class Booking(models.Model):
     booking_date = models.DateField(default=datetime.date.today)
     booking_time = models.CharField(
         max_length=10, default='08:00', choices=pool_timings)
-    phone_number = models.CharField(max_length=20)
+    phone_number = PhoneNumberField(blank=True, null=True)
     booked_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 

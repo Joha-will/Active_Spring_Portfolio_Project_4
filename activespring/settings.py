@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'bookings',
     'webpages',
+    "phonenumber_field",
 ]
 
 MIDDLEWARE = [
