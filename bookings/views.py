@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
+from django.shortcuts import render, redirect, HttpResponse, get_object_or_404, reverse
 from .models import Booking
 from django.contrib import messages
 from bookings.forms import CustomerForm
@@ -22,7 +22,7 @@ def create_booking(request):
         form = CustomerForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('bookings/booking')
+            return redirect(reverse('bookings/booking'))
     context = {'form': form}
     return render(request, 'bookings/create-booking.html', context)
 

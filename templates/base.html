@@ -49,16 +49,26 @@
                     <li class="nav-item active">
                         <a href="{% url 'webpages:contact-us' %}" class="nav-link hvr-underline-from-center">Contact Us</a>
                     </li>
+                    {% if user.is_authenticated %}
                     <li class="nav-item active">
-                        <a href="#" class="nav-link hvr-underline-from-center d-lg-none">Sign In</a>
+                        <a href="{% url 'account_logout' %}" class="nav-link hvr-underline-from-center d-lg-none">Sign Out</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item active">
+                        <a href="{% url 'account_login' %}" class="nav-link hvr-underline-from-center d-lg-none">Sign In</a>
                     </li>
                     <li class="nav-item active">
-                        <a href="#" class="nav-link hvr-underline-from-center d-lg-none">Sign Up</a>
+                        <a href="{% url 'account_signup' %}" class="nav-link hvr-underline-from-center d-lg-none">Sign Up</a>
                     </li>
+                    {% endif %}
                 </ul>
                 <div id="hide">
-                    <a href="#" class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign In</a>
-                    <a href="#" class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign Up</a>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'account_logout' %}" class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign Out</a>
+                    {% else %}
+                        <a href="{% url 'account_login' %}" class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign In</a>
+                        <a href="{% url 'account_signup' %}" class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign Up</a>
+                    {% endif%}
                 </div>
             </div>
         </nav>
