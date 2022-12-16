@@ -22,7 +22,7 @@ def create_booking(request):
         form = CustomerForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('booking')
+            return redirect('bookings/booking')
     context = {'form': form}
     return render(request, 'bookings/create-booking.html', context)
 
@@ -37,3 +37,10 @@ def update_booking(request, booking_id):
     form = CustomerForm(instance=customer)
     context = {'form': form}
     return render(request, 'bookings/update-booking.html', context)
+
+
+def delete_booking(request, booking_id):
+    customer = get_object_or_404(Booking, booking_id=booking_id)
+    customer.delete()
+    response = redirect('bookings/booking')
+    return response
