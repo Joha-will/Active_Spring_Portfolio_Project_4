@@ -16,13 +16,13 @@ def booking_home(request):
     return render(request, 'bookings/booking.html', context)
 
 
-def create_booking(request):
+def create_booking(request, **kwags):
     form = CustomerForm()
     if request.method == 'POST':
         form = CustomerForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(reverse('bookings/booking'))
+            return redirect(reverse('bookings:booking'))
     context = {'form': form}
     return render(request, 'bookings/create-booking.html', context)
 
@@ -33,7 +33,7 @@ def update_booking(request, booking_id):
         form = CustomerForm(request.POST, instance=customer)
         if form.is_valid():
             form.save()
-            return redirect('booking')
+            return redirect(reverse('bookings:booking'))
     form = CustomerForm(instance=customer)
     context = {'form': form}
     return render(request, 'bookings/update-booking.html', context)
@@ -42,5 +42,4 @@ def update_booking(request, booking_id):
 def delete_booking(request, booking_id):
     customer = get_object_or_404(Booking, booking_id=booking_id)
     customer.delete()
-    response = redirect('bookings/booking')
-    return response
+    return redirect(reverse('bookings:booking'))
