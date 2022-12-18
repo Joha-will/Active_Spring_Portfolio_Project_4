@@ -33,6 +33,7 @@
                     <label for="commentbox">Enquiry or Comment</label>
                     <textarea class="form-control" name="commentbox" id="commentbox" rows="10" required></textarea>
                     <button type="submit" class="btn enquiry-btn p-1"> Enquire Now</button>
+                    
                 </form>
             </div>
             <!-- Modal -->
@@ -40,15 +41,12 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-          </button>
+          <h5 class="modal-title" id="staticBackdropLabel"></h5>
         </div>
         <div class="modal-body">
-          ...
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+        <div class="modal-footer bg-green">
+          <a href="{% url 'account_login' %}" class=" nav-link navbar-nav p-2 return-home-btn ml-1  d-inline text-center">Sign In</a>
         </div>
       </div>
     </div>

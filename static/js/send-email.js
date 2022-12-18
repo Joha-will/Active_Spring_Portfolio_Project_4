@@ -7,7 +7,11 @@ function sendMail(contactUs) {
         .then(
             function (response) {
                 if (response.status == 200) {
-                    $(".my-modal").modal('toggle');
+                   $(".my-modal").modal('toggle', response)
+                   $('.modal-title').html('Thank you for your email!')
+                   $('.modal-body').html('<p>A member of staff would be in contact with you shortly. Your email/feedbacks mean alot to us here at active-spring.</p>')
+
+
                 }
             },
             function (error) {

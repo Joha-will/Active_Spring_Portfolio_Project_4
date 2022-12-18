@@ -121,6 +121,17 @@ h5 {
     -webkit-user-select: none;
     touch-action: manipulation;
 }
+.return-home-btn {
+    color: #001435;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    border: 0;
+    cursor: pointer;
+}
+
 
 .enquiry-btn {
     background-color: #2098D1;
@@ -138,7 +149,6 @@ h5 {
     cursor: pointer;
     margin: 5px 0;
 }
-
 @media (min-width: 768px) {
     .button-43 {
         padding: 1rem 2rem;
@@ -298,6 +308,12 @@ footer {
 hr.cl-black {
     border: 1px solid #001435;
 }
+
+.bg-green {
+    background-color: #51C154;
+}
+
+
 
 
 
