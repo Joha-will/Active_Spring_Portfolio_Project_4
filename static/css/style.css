@@ -147,6 +147,8 @@ h5 {
 
 /** ------------------------------------- End of NavBar **/
 
+
+
 /** ------------------------------------- Logo Section **/
 .first-bg-image {
     background-image: url('https://s1.gifyu.com/images/artem-verbo-Vc8jfmzWoFE-unsplash.jpg');
@@ -178,6 +180,9 @@ h1 {
 }
 
 /** ------------------------------------- End of Logo Section **/
+
+
+
 /** ------------------------------------- Pool Ethos (First Article) **/
 
 .pool-info {
@@ -206,6 +211,9 @@ small {
 }
 
 /** ------------------------------------- End of Pool Ethos (First Article) **/
+
+
+
 /** ------------------------------------- Pool Opening Hours (Second Article) **/
 /* Pool opening hours sections */
 .table-content {
@@ -216,21 +224,51 @@ small {
     background-color: hsl(0, 0%, 85%);
 }
 
-.table-content tbody tr td {
-    font-size: 1em;
-    text-align: center;
-    padding: 5px;
-}
-
 div img {
     width: 100%;
     box-shadow: 0 0 5px #001435;
 }
 
 /** ------------------------------------- End of Pool Opening Hours (Second Article) **/
+
+
+
+/** ------------------------------------- Booking.Html Section **/
+
+/** Table css from @ Chris Coyier **/
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: auto;
+  }
+  tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  td, th { 
+    padding: 6px; 
+    text-align: left; 
+  }
+
+#CRUD-edit td a {
+    text-decoration: none;
+    font-size: 1px;
+    color: crimson;
+}
+
+
+
+
+
+
+
+
 /** ------------------------------------- Footer Section **/
 footer {
     background-color: hsl(0, 0%, 85%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .foot-link {
@@ -244,6 +282,10 @@ footer {
 }
 
 /** ------------------------------------- End of Footer Section **/
+
+
+
+
 /**------------------ colours **/
 .cl-black {
     color: #001435;
@@ -256,6 +298,8 @@ footer {
 hr.cl-black {
     border: 1px solid #001435;
 }
+
+
 
 /*---------------------------- Media queries **/
 @media screen and (max-width:1075px) {
@@ -275,4 +319,37 @@ hr.cl-black {
     .the-logo {
         font-size: 1.5rem;
     }
+}
+
+/*---------------------------- Responsive table **/
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
 }

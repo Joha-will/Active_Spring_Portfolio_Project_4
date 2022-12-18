@@ -1,8 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %} Active-Spring swimming pool {% endblock%}
+{% block title %} Active-Spring| Contact Us {% endblock%}
 
 {% block content %}
+<head>
+    <!--EmailJs script-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("XAx_NGI2tj6CUrx52");
+        })();
+    </script>
+    <!-- / .EmailJs script-->
+</head>
 <body>
     <section class="container-fluid contact-bg-image">
         <div class="row">
@@ -11,7 +22,8 @@
                 <h5>If you have any enquires, please fill out the form and we would be happy to help.</h5>
             </div>
             <div class="col-lg-5 mt-5">
-                <form onsubmit="return sendMail(this);">
+                <form onsubmit="return sendMail(this);" method="POST">
+                    {% csrf_token %}
                     <label for="fullname">Name</label>
                     <input type="text" name="name" class="form-control" id="fullname" placeholder="name@example.com"
                         required>
@@ -23,33 +35,29 @@
                     <button type="submit" class="btn enquiry-btn p-1"> Enquire Now</button>
                 </form>
             </div>
+            <!-- Modal -->
+<div class="modal fade my-modal" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
         </div>
     </section>
-    <!-- Footer -->
-    <footer class="container-fluid">
-        <div class="navbar navbar-expand-sm ml-auto">
-            <div class="ml-auto d-block p-3">
-                <h4 class="text-center">Our Social</h4>
-                <hr class="mt-0 cl-black">
-                <div class="social-media">
-                    <a href="#" class="foot-link ml-2"><i class="fa-brands fa-square-instagram hvr-bounce-in"
-                            target="_blank"></i></i></a>
-                    <a href="#" class="foot-link ml-2"><i class="fa-brands fa-square-facebook hvr-bounce-in"
-                            target="_blank"></i></a>
-                    <a href="#" class="foot-link ml-2"><i class="fa-brands fa-linkedin hvr-bounce-in"
-                            target="_blank"></i></a>
-                    <a href="#" class="foot-link ml-2"><i class="fa-brands fa-github hvr-bounce-in"
-                            target="_blank"></i></a>
-                </div>
-            </div>
-        </div>
-        <hr class="mt-0 cl-black">
-        <div class="text-center">
-            <p> Copyrights 2022</p>
-        </div>
-    </footer>
-    <!--/ .Footer-->
+    <script src="/static/js/send-email.js"></script>
 </body>
+
 
 </html>
 

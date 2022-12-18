@@ -7,10 +7,11 @@ function sendMail(contactUs) {
         .then(
             function (response) {
                 if (response.status == 200) {
-                    console.log('this is it', response)
+                    $(".my-modal").modal('toggle');
                 }
             },
             function (error) {
                 console.log('Unsuccessful', error)
             });
+            return false
 }
