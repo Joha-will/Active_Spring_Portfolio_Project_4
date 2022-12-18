@@ -40,13 +40,13 @@
 <div class="modal fade my-modal" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header grad">
           <h5 class="modal-title" id="staticBackdropLabel"></h5>
         </div>
-        <div class="modal-body">
+        <div class="modal-body grad">
         </div>
-        <div class="modal-footer bg-green">
-          <a href="{% url 'account_login' %}" class=" nav-link navbar-nav p-2 return-home-btn ml-1  d-inline text-center">Sign In</a>
+        <div id="change-color" class="modal-footer">
+          <a href="{% url 'bookings:index' %}" class=" nav-link navbar-nav p-2 return-home-btn ml-1  d-inline text-center">Return Back Home Page</a>
         </div>
       </div>
     </div>

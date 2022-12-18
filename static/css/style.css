@@ -310,7 +310,16 @@ hr.cl-black {
 }
 
 .bg-green {
-    background-color: #51C154;
+    background-color: #83DA86;
+}
+
+.grad {
+    background: radial-gradient(circle, rgba(32,152,209,1) 51%, rgba(238,174,202,1) 100%);
+    color: #1E1E1E;
+  }
+
+.red-btn {
+    background: red;
 }
 
 
