@@ -14,12 +14,19 @@
     </script>
     <!-- / .EmailJs script-->
 </head>
+
 <body>
     <section class="container-fluid contact-bg-image">
         <div class="row">
             <div class="col-lg-4">
                 <h2> Contact Us</h2>
-                <h5>If you have any enquires, please fill out the form and we would be happy to help.</h5>
+                <hr class="cl-black">
+                <p>If you have any enquires, please fill out the form and we would be happy to help.</p>
+                <div class="col-lg-10 col-md-5 col-sm-12 m-auto p-0">
+                    <div class="text-center p-3 home-images">
+                        <img src="https://s9.gifyu.com/images/raj-rana-ttzU0sZmkpA-unsplash.jpg" alt="Image of a little girl splashing in a pool.">
+                    </div>
+                </div>
             </div>
             <div class="col-lg-5 mt-5">
                 <form onsubmit="return sendMail(this);" method="POST">
@@ -33,24 +40,27 @@
                     <label for="commentbox">Enquiry or Comment</label>
                     <textarea class="form-control" name="commentbox" id="commentbox" rows="10" required></textarea>
                     <button type="submit" class="btn enquiry-btn p-1"> Enquire Now</button>
-                    
+
                 </form>
             </div>
             <!-- Modal -->
-<div class="modal fade my-modal" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header grad">
-          <h5 class="modal-title" id="staticBackdropLabel"></h5>
-        </div>
-        <div class="modal-body grad">
-        </div>
-        <div id="change-color" class="modal-footer">
-          <a href="{% url 'bookings:index' %}" class=" nav-link navbar-nav p-2 return-home-btn ml-1  d-inline text-center">Return Back Home Page</a>
-        </div>
-      </div>
-    </div>
-  </div>
+            <div class="modal fade my-modal" id="staticBackdrop" data-backdrop="static" data-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header grad">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                        </div>
+                        <div class="modal-body grad">
+                        </div>
+                        <div id="change-color" class="modal-footer">
+                            <a href="{% url 'bookings:index' %}"
+                                class=" nav-link navbar-nav p-2 return-home-btn ml-1  d-inline text-center">Return Back
+                                Home Page</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <script src="/static/js/send-email.js"></script>
