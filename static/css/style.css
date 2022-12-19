@@ -234,7 +234,7 @@ small {
     background-color: hsl(0, 0%, 85%);
 }
 
-div img {
+.home-images img {
     width: 100%;
     box-shadow: 0 0 5px #001435;
 }
