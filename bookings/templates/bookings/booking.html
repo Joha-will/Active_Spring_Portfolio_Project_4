@@ -3,58 +3,72 @@
 {% block title %} Active-Spring| Bookings {% endblock%}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid mb-auto">
   <div class="row d-flex align-items-center p-4">
     <div class="col-lg-12 m-auto w-100">
       <h1 class="text-center">Bookings</h1>
-      {% if user.is_authenticated %}
-      <div>
-        <a href="{% url 'bookings:create' %}" class="booking-btn text-center m-auto w-100">Make a booking</a>
-      </div>
-      <div class="col-lg-10 m-auto" style="overflow-x:auto;">
-            {% for customer in customers %}
-              <td><a href="{% url 'bookings:update' customer.booking_id %} "> Change booking</a> </td>
-              <td><a id="CRUD-edit" href="{% url 'bookings:delete' customer.booking_id %}"> Delete/Cancel booking</a> </td>
-            </tr>
-            <ul class="list-group">
-              <li class="list-group-item list-group-item-light"><h4>Booking ID</h4>{{customer.booking_id}}</li>
-              <li class="list-group-item list-group-item-secondary"><h4>Full Name</h4>{{customer.full_name}}</li>
-              <li class="list-group-item list-group-item-light"><h4>Email</h4>{{customer.email}}</li>
-              <li class="list-group-item list-group-item-secondary"><h4>No. Of Perosn</h4>{{customer.no_of_persons}}</li>
-              <li class="list-group-item list-group-item-light"><h4>Booked On</h4>{{customer.booked_on}}</li>
-            </ul>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-      {% else %}
-
-      <p>You have no bookings</p>
-
-      <!-- Modal -->
-      <div id="myModal" class="modal fade">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Sign Up or Sign In to book your swimming slots today!</h5>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <p>Get active and enjoy a good swim.</p>
-              <a href="{% url 'account_login' %}"
-                class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign In</a>
-              <a href="{% url 'account_signup' %}"
-                class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign Up</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {% endif %}
-
     </div>
+  </div>
+  {% if user.is_authenticated %}
+  <div class="row">
+    <div class="col-12">
+      <a href="{% url 'bookings:create' %}" class="booking-btn text-center m-auto w-100">Make a booking</a>
+    </div>
+  </div>
+  <div class="row mt-5">
+    {% for customer in customers %}
+    <div class="col-lg-4" style="overflow-x:auto;">
+      <ul class="list-group list-group-horizontal mt-5 w-auto">
+        <li class="list-group-item"><a href="{% url 'bookings:update' customer.booking_id %} "> Change
+            booking</a></li>
+        <li class="list-group-item"><a id="CRUD-edit" href="{% url 'bookings:delete' customer.booking_id %}">
+            Delete/Cancel booking</a></li>
+      </ul>
+      <ul class="list-group w-auto">
+        <li class="list-group-item list-group-item-light">
+          <h4>Booking ID</h4>{{customer.booking_id}}
+        </li>
+        <li class="list-group-item list-group-item-secondary">
+          <h4>Full Name</h4>{{customer.full_name}}
+        </li>
+        <li class="list-group-item list-group-item-light">
+          <h4>Email</h4>{{customer.email}}
+        </li>
+        <li class="list-group-item list-group-item-secondary">
+          <h4>No. Of Perosn</h4>{{customer.no_of_persons}}
+        </li>
+        <li class="list-group-item list-group-item-light">
+          <h4>Booked On</h4>{{customer.booked_on}}
+        </li>
+      </ul>
+    </div>
+    {% endfor %}
 
   </div>
+  {% else %}
+  <div class="col-12 text-center p-5">
+    <h3>You have no bookings</h3>
+  </div>
 
+  <!-- Modal -->
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Sign Up or Sign In to book your swimming slots today!</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Get active and enjoy a good swim.</p>
+          <a href="{% url 'account_login' %}"
+            class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign In</a>
+          <a href="{% url 'account_signup' %}"
+            class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endif %}
 </div>
 {% endblock content %}

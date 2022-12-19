@@ -285,7 +285,23 @@ table {
     font-size: 3rem;
     color: #FFFFFF;
 }
+/** ------------------------------------- Endof Facilities.Html Section **/
 
+
+
+
+
+/** ------------------------------------- Contact-Us.Html Section **/
+
+
+.con-form {
+    background-color: hsl(0, 0%, 85%);
+    height:auto;
+    margin: auto auto;
+    box-shadow: 0 0 5px #001435;
+    border-radius: 10px;
+}
+/** ------------------------------------- Endof Contact-Us.Html Section **/
 
 
 
@@ -310,7 +326,7 @@ footer {
     padding: 2px 5px;
 }
 
-/** ------------------------------------- End of Footer Section **/
+/** ------------------------------------- Endof Footer Section **/
 
 
 
@@ -340,9 +356,7 @@ hr.cl-black {
 .red-btn {
     background: red;
 }
-
-
-
+/**------------------ Endof colours **/
 
 
 /*---------------------------- Media queries **/

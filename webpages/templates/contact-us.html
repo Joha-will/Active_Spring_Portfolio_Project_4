@@ -16,9 +16,9 @@
 </head>
 
 <body>
-    <section class="container-fluid contact-bg-image">
+    <section class="container-fluid contact-bg-image mb-auto">
         <div class="row">
-            <div class="col-lg-4 mt-4">
+            <div class="col-lg-4 mt-4 ml-auto">
                 <h2> Contact Us</h2>
                 <hr class="cl-black">
                 <small>If you have any enquires, please fill out the form and we would be happy to help.</small>
@@ -28,14 +28,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5 mt-5">
-                <form onsubmit="return sendMail(this);" method="POST">
+            <div class="col-lg-5 con-form">
+                <form  onsubmit="return sendMail(this);" method="POST">
                     {% csrf_token %}
                     <label for="fullname">Name</label>
-                    <input type="text" name="name" class="form-control" id="fullname" placeholder="name@example.com"
+                    <input type="text" name="name" class="form-control" id="fullname" placeholder="Enter your full name"
                         required>
                     <label for="email">Email</label>
-                    <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com"
+                    <input type="email" name="email" class="form-control" id="email" placeholder="email@example.com"
                         required>
                     <label for="commentbox">Enquiry or Comment</label>
                     <textarea class="form-control" name="commentbox" id="commentbox" rows="10" required></textarea>
