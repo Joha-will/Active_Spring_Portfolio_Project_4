@@ -235,8 +235,9 @@ small {
 }
 
 .home-images img {
-    width: 100%;
     box-shadow: 0 0 5px #001435;
+    width: 100%;
+    height: auto;
 }
 
 /** ------------------------------------- End of Pool Opening Hours (Second Article) **/
@@ -280,10 +281,9 @@ table {
     opacity: 1.1;
 }
 
-.sauna-img img {
-    filter: brightness(60%);
-    opacity: 1.1;
-    height: 50%;
+#ss-header {
+    font-size: 3rem;
+    color: #FFFFFF;
 }
 
 
