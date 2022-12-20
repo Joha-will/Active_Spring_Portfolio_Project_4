@@ -32,6 +32,7 @@ def create_booking(request, **kwags):
 
 def update_booking(request, booking_id):
     customer = get_object_or_404(Booking, booking_id=booking_id)
+    qItem = form.objects.get(attributes="no_of_persons")
     if request.method == 'POST':
         form = CustomerForm(request.POST, instance=customer)
         if form.is_valid():
