@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, HttpResponse, get_object_or_404, reverse
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from .models import Booking
 from django.contrib import messages
 from bookings.forms import CustomerForm
@@ -23,7 +23,7 @@ def create_booking(request, **kwags):
         if form.is_valid():
             form.save()
             messages.add_message(
-                request, messages.SUCCESS, 
+                request, messages.SUCCESS,
                 'Your booking has been successfully created!')
             return redirect(reverse('bookings:booking'))
     context = {'form': form}

@@ -16,18 +16,13 @@ pool_timings = (
     ('17:00', '17:00'),
     ('18:00', '18:00'),
 )
-Num_of_persons = (
-    ('1', '1'),
-    ('2', '2'),
-    ('3', '3'),
-    ('11:00', '11:00'),
-    ('12:00', '12:00'),
-    ('13:00', '13:00'),
-    ('14:00', '14:00'),
-    ('15:00', '15:00'),
-    ('16:00', '16:00'),
-    ('17:00', '17:00'),
-    ('18:00', '18:00'),
+pool_status = (
+
+    ('Pending', 'Pending'),
+    ('Confirmed', 'Confirmed'),
+    (
+        'Rejected, try booking on a different hour',
+        'Rejected, try booking on a different hour'),
 )
 
 
@@ -38,10 +33,12 @@ class Booking(models.Model):
         User, on_delete=models.CASCADE, related_name='customer', null=True)
     email = models.EmailField(max_length=254)
     no_of_persons = models.IntegerField(default=1)
-    booking_date = models.DateField(widget=SelectDateWidget)
+    booking_date = models.DateField()
     booking_time = models.CharField(
         max_length=10, default='08:00', choices=pool_timings)
     phone_number = PhoneNumberField(blank=True, null=True)
+    booking_status = models.CharField(
+        max_length=50, choices=pool_status, default="Pending")
     booked_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 
