@@ -76,8 +76,6 @@
                     {% for message in messages %}
                     <div class="alert {{ message.tags }} alert dismissable fade show" id="msg" role="alert">
                         {{ message | safe }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                        </button>
                     </div>
                     {% endfor %}
                 </div>
@@ -130,6 +128,13 @@
     </script>
     <script src="/static/js/send-email.js"></script>
     <script src="/static/js/script.js"></script>
+    <script>
+        setTimeout(function () {
+            let messages = document.getElementById("msg");
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }, 3000);
+    </script>
 </body>
 
 </html>

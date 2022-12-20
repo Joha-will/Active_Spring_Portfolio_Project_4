@@ -22,6 +22,10 @@ h5 {
     margin: 0;
 }
 
+a:link {
+    text-decoration: none;
+}
+
 /** -------------------------------------NavBar **/
 .nav-colour {
     background-color: hsl(0, 0%, 85%);
@@ -65,7 +69,7 @@ h5 {
     left: 51%;
     right: 51%;
     bottom: 0;
-    background: #2098D1;
+    background: #17a2b8;
     height: 4px;
     -webkit-transition-property: left, right;
     transition-property: left, right;
@@ -104,9 +108,9 @@ h5 {
 
 /** By Eatmore.io **/
 .register-btn {
-    background-color: #2098D1;
+    background-color: #17a2b8;
     color: whitesmoke;
-    background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+    background-image: linear-gradient(-180deg, #17a2b8 0%, #17a2b8 100%);
     border-radius: .1rem;
     box-sizing: border-box;
     color: #FFFFFF;
@@ -134,9 +138,9 @@ h5 {
 
 
 .enquiry-btn {
-    background-color: #2098D1;
+    background-color: #17a2b8;
     color: whitesmoke;
-    background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+    background-image: linear-gradient(-180deg, #17a2b8 0%, #17a2b8 100%);
     border-radius: .1rem;
     box-sizing: border-box;
     color: #FFFFFF;
@@ -356,6 +360,7 @@ hr.cl-black {
 .red-btn {
     background: red;
 }
+
 /**------------------ Endof colours **/
 
 
