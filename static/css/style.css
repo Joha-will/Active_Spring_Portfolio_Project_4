@@ -26,6 +26,11 @@ a:link {
     text-decoration: none;
 }
 
+#all-btns:hover {
+    background-color: #E6E4E9;
+    opacity: 0.9;
+}
+
 /** -------------------------------------NavBar **/
 .nav-colour {
     background-color: hsl(0, 0%, 85%);

@@ -1,4 +1,4 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, EmailInput, NumberInput
 from django import forms
 from bookings.models import Booking
 
@@ -14,4 +14,9 @@ class CustomerForm(forms.ModelForm):
         exclude = ['booked_on', 'approved', 'booking_status']
         widgets = {
             'booking_date': DateInput(),
+            'email': EmailInput(attrs={
+                'placeholder': 'Email'}),
+            'phone_number': NumberInput(attrs={
+                'placeholder': '+44XXXXXXXXXX'
+            })
         }
