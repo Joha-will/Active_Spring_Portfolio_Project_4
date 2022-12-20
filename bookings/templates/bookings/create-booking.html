@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %} Active-Spring swimming pool {% endblock%}
+{% block title %} Active-Spring | Create Booking {% endblock%}
 
 {% block content %}
 <div class="container mb-auto">
@@ -14,7 +14,7 @@
                 <!-- Security token -->
                 {% csrf_token %}
                 {{form.as_p}}
-                <input  type="submit" class="btn enquiry-btn p-1" value="Making Booking">
+                <input  type="submit" class="btn enquiry-btn p-1 w-auto" value="Making Booking">
             </form>
         </div>
     </div>

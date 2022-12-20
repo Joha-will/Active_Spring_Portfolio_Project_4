@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from .models import Booking
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.contrib import messages
 from bookings.forms import CustomerForm
 
@@ -16,6 +18,7 @@ def booking_home(request):
     return render(request, 'bookings/booking.html', context)
 
 
+@login_required
 def create_booking(request, **kwags):
     form = CustomerForm()
     if request.method == 'POST':
@@ -32,7 +35,6 @@ def create_booking(request, **kwags):
 
 def update_booking(request, booking_id):
     customer = get_object_or_404(Booking, booking_id=booking_id)
-    qItem = form.objects.get(attributes="no_of_persons")
     if request.method == 'POST':
         form = CustomerForm(request.POST, instance=customer)
         if form.is_valid():

@@ -1,4 +1,4 @@
-from django.forms import ModelForm, EmailInput, NumberInput
+from django.forms import ModelForm, EmailInput, NumberInput, TextInput
 from django import forms
 from bookings.models import Booking
 
@@ -11,12 +11,15 @@ class CustomerForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = '__all__'
-        exclude = ['booked_on', 'approved', 'booking_status']
+        exclude = ['booked_on', 'approved', 'booking_status', 'full_name']
         widgets = {
             'booking_date': DateInput(),
             'email': EmailInput(attrs={
                 'placeholder': 'Email'}),
             'phone_number': NumberInput(attrs={
                 'placeholder': '+44XXXXXXXXXX'
-            })
+            }),
+            'name': TextInput(attrs={
+                'placeholder': 'Name'
+            }),
         }

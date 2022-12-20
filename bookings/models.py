@@ -30,6 +30,7 @@ pool_status = (
 class Booking(models.Model):
     "The booking model"
     booking_id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=200, blank=False, default="")
     full_name = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='customer', null=True)
     email = models.EmailField(max_length=254)

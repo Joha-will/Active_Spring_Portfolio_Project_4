@@ -13,7 +13,8 @@
   <div class="row">
     <div class="col-12">
       <ul class="list-group list-group-horizontal mt-5 w-auto">
-        <li class="list-group-item bg-info"><a href="{% url 'bookings:create' %}" class="booking-btn text-dark text-center m-auto w-100">Make a booking</a></li>
+        <li class="list-group-item bg-info"><a href="{% url 'bookings:create' %}"
+            class="booking-btn text-dark text-center m-auto w-100">Make a booking</a></li>
       </ul>
       <hr class="cl-black">
     </div>
@@ -22,16 +23,18 @@
     {% for customer in customers %}
     <div class="col-lg-4" style="overflow-x:auto;">
       <ul class="list-group list-group-horizontal mt-5 w-auto">
-        <li class="list-group-item bg-info"><a class="text-dark" href="{% url 'bookings:update' customer.booking_id %} "> Update
+        <li class="list-group-item bg-info"><a class="text-dark"
+            href="{% url 'bookings:update' customer.booking_id %} "> Update
             booking</a></li>
-        <li class="list-group-item bg-danger"><a type="button" data-toggle="modal" data-target="#staticBackdrop">Delete Booking </a></li>
+        <li class="list-group-item bg-danger"><a type="button" data-toggle="modal" data-target="#staticBackdrop">Delete
+            Booking </a></li>
       </ul>
       <ul class="list-group w-auto text-dark">
         <li class="list-group-item list-group-item-light text-dark">
           <h4>Booking ID</h4>{{customer.booking_id}}
         </li>
         <li class="list-group-item list-group-item-secondary">
-          <h4>Full Name</h4>{{customer.full_name}}
+          <h4>Full Name</h4>{{customer.name}}
         </li>
         <li class="list-group-item list-group-item-light text-dark">
           <h4>Email</h4>{{customer.email}}
@@ -68,12 +71,11 @@
           </div>
           <div class="modal-footer p-0 m-0">
             <div class="col-6 red-btn m-0">
-              <a href="{% url 'bookings:delete' customer.booking_id %}"
-                class=" nav-link navbar-nav text-center p-3">Yes I'm Sure</a>
+              <a href="{% url 'bookings:delete' customer.booking_id %}" class=" nav-link navbar-nav text-center p-3">Yes
+                I'm Sure</a>
             </div>
             <div class="col-6 cl-silver m-0">
-              <a href="{% url 'bookings:booking' %}"
-                class=" nav-link navbar-nav text-center p-3">No, take me back</a>
+              <a href="{% url 'bookings:booking' %}" class=" nav-link navbar-nav text-center p-3">No, take me back</a>
             </div>
           </div>
         </div>
@@ -83,6 +85,29 @@
 
   </div>
   {% else %}
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-info">
+          <h5 class="modal-title">Sign In or Sign In to book your swimming slot today!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body bg-secondary">
+          <p>Get active, Stay active!</p>
+        </div>
+        <div class="modal-footer p-0 m-0">
+          <div class="col-6 bg-info m-0">
+            <a href="{% url 'account_login' %}" class=" nav-link navbar-nav text-center p-3">Sign In</a>
+          </div>
+          <div class="col-6 bg-info m-0">
+            <a href="{% url 'account_signup' %}" class=" nav-link navbar-nav text-center p-3">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="col-12 text-center p-5">
     <h3>You have no bookings</h3>
   </div>
