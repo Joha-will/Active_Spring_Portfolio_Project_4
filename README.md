@@ -1,5 +1,6 @@
 # **Active-Spring Swimming Pool** 
-![headimg](https://user-images.githubusercontent.com/98041941/185298467-6c1f21c8-86a8-4763-9eaf-26f5ed0fa02c.png)
+![Screenshot 2022-12-21 at 02 15 52](https://user-images.githubusercontent.com/98041941/208894245-75c3027a-e7ce-451e-872b-78648fdc27f3.png)
+
 
 ---
 
@@ -132,8 +133,6 @@ The Booking Model is made up of the following fields:
 10. booked_on = This is a DateTimeField which displays the date and time the customer made a booking.
 11. approved = This is a BooleanField which is used to approve/reject bookings.
 
-![headimg](https://user-images.githubusercontent.com/98041941/185298467-6c1f21c8-86a8-4763-9eaf-26f5ed0fa02c.png)
-
 #### **Database Design**
 
 #### **Fonts**
@@ -146,7 +145,8 @@ The images used throughout this project came from my researching online and as w
 
 #### **Colours**
 
-[IMG]
+![color-pallette](https://user-images.githubusercontent.com/98041941/208894848-d309fc31-6d28-472f-9fa1-db209ec47f6d.png)
+
 
 #D9D9D9
 - In several places on the website, including the header, footer, and form backgrounds, this colour was utilized.
@@ -165,12 +165,6 @@ The images used throughout this project came from my researching online and as w
 ##  **Skeleton**
 These wireframes were made during the planning stage to help me with the layout and design of specific page elements and content. They also assisted me in choosing how to implement particular functionalities.
 
-
-
- 
-
-
-
 ## **Surface**
 
 ### **Features**
@@ -179,18 +173,20 @@ These wireframes were made during the planning stage to help me with the layout 
 
 **Logo:** 
 - This website has a logo which can be seen across all pages and it is full responsive. Click the link before to view the website logo.
-- [Logo]()
+
+![wb-logo](https://user-images.githubusercontent.com/98041941/208895879-e30c774a-cd84-4a68-9ad6-9bb5150d70f3.png)
 
 **Navigation Bar:**
 - Every page has access to the Navbar, and links to all pages of the website. This navbar is fully responsive in all resolutions.
+![Screenshot 2022-12-21 at 04 23 24](https://user-images.githubusercontent.com/98041941/208895295-9d3ce5d2-2e4e-4d2a-a883-2b97607e9cd1.png)
 
 **Pool Opening Hours Tabel**
 - The Home page has a tabel which provides customer with the pool opening and closing hours.
-- [Opening Hours Table Screenshot]()
+
+![Screenshot 2022-12-21 at 04 24 10](https://user-images.githubusercontent.com/98041941/208895328-e34166a2-96d6-4782-8672-5ebda5626b48.png)
 
 **Footer**
 - The website footer can been seen across all pages of the website. The footer is made up of the website copyrights information, pool address and the websites social media links.
-- [Website's Footer screenshot]()
 
 #### **Booking page**
 
@@ -266,7 +262,7 @@ I started working on automated testing, but when I tried to execute the test I w
 Got an error creating the test database: permission denied to create database].
 This project was tested manually by using the following methods:
 
-### ** Manual Testing**
+### **Manual Testing**
 
 **Navigation Bar**
 
@@ -442,6 +438,7 @@ The website was tested in different browsers such as:
         2. (Error: Stray end tag div) this was causing 2 of the errors which was found and resolved by removing 2 stray div tags. Then the code was retested to check that errors and warning were rectified.
 
 - W3C CSS Validator
+![Screenshot 2022-12-21 at 07 28 26](https://user-images.githubusercontent.com/98041941/208895509-786b283b-5ae3-40c6-94b8-da2959960db4.png)
 
 -  When the W3C CSS Validator to check style.css code, 2 errors and 10 warnings were found.
     - However, I rectified the CSS 2 errors by performing the following:
@@ -455,8 +452,6 @@ The website was tested in different browsers such as:
 
 ### **Using GitHub and GitPod**
 The main branch of this repository has been used for the deployed version of this application.
-As instructed by Code Institute, I used the Python Essentials Template that was provided.
-- [Python Essentials Template](https://github.com/Code-Institute-Org/python-essentials-template)
 
 The following steps were used to create a repository, setup a workspace and use Github and Gipod.
 - Click the Use this Template button.
@@ -651,9 +646,7 @@ Head back over to Heroku and go to Config Vars
 
 **Code**
 
-I also found a youtube videos that demonstrated how to implement certain functionalities. Code was used from some the websites and the videos. A link to the websites and the videos can be found below. Code was used from [programiz](https://www.programiz.com/) to set current time and date.
-- [www.101computing.net](https://www.101computing.net/python-typing-text-effect/)
-- [Tech With Tim](https://www.youtube.com/watch?v=u51Zjlnui4Y&ab_channel=TechWithTim)
+I also found a youtube videos that demonstrated how to implement certain functionalities. Code was used from some the websites and the videos. A link to the websites and the videos can be found below. 
 
 These online resources were really helpful when I needed to refamiliarize myself with a specific topic or syntax. They were really education as well.
 
