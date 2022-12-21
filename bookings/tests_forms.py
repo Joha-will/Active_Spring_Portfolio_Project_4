@@ -8,7 +8,8 @@ class TestCustomerForm(TestCase):
         form = CustomerForm({'full_name': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('full_name', form.errors.keys())
-        self.assertEqual(form.errors['full_name'][0], 'This field is required.')
+        self.assertEqual(
+            form.errors['full_name'][0], 'This field is required.')
 
     def test_form_has_required_fields(self):
         form = CustomerForm()

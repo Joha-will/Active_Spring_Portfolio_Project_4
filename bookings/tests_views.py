@@ -1,7 +1,7 @@
 from django.test import TestCase
 from .models import Booking
 
-"""
+
 class TestViews(TestCase):
 
     def test_index_page(self):
@@ -26,7 +26,8 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, 'bookings/index.html')
 
     def test_can_create_booking(self):
-        response = self.client.post('/create', {'full_name': 'active-personnel'})
+        response = self.client.post(
+            '/create', {'full_name': 'active-personnel'})
         self.assertRedirects(response, '/booking')
 
     def test_can_delete_booking(self):
@@ -35,4 +36,3 @@ class TestViews(TestCase):
         self.assertRedirects(response, '/booking')
         current_customers = Booking.objects.filter(id=booking_id)
         self.assertEqual(len(current_customers), 0)
-"""

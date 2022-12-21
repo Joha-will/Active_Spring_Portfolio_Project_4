@@ -11,8 +11,6 @@ function sendMail(contactUs) {
                    $('.modal-title').html(`Thank you for your email!`);
                    $('.modal-body').html('<p>A member of staff would be in contact with you shortly. Your email/feedbacks are important to us here at active-spring.</p>');
                    $("#change-color").addClass("bg-green");
-
-
                 }
             },
             function (error) {
@@ -23,5 +21,6 @@ function sendMail(contactUs) {
                 $(".modal-body").removeClass("grad");
                 $("#change-color").addClass("red-btn");
             });
-            return false
+            return false;
 }
+sendMail();

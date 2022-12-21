@@ -269,12 +269,6 @@ table {
     text-align: left; 
   }
 
-#CRUD-edit td a {
-    text-decoration: none;
-    font-size: 1px;
-    color: crimson;
-}
-
 
 
 
@@ -287,7 +281,7 @@ table {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    opacity: 1.1;
+    opacity: 1;
 }
 
 #ss-header {
@@ -394,9 +388,8 @@ hr.cl-black {
 
 /*---------------------------- Responsive table **/
 
-@media 
-only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px) {
+@media screen and (max-width: 760px),
+(min-width: 768px) and (max-width: 1024px) {
 	table, thead, tbody, th, td, tr { 
 		display: block; 
 	}
