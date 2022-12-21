@@ -1,37 +1,6 @@
 # **Active-Spring Swimming Pool** 
 ![headimg](https://user-images.githubusercontent.com/98041941/185298467-6c1f21c8-86a8-4763-9eaf-26f5ed0fa02c.png)
-- Live links to the project, Github and Heroku.
-    - [https://github.com/Joha-will/Portfolio-Project-3-Python-Essentials-](https://github.com/Joha-will/Portfolio-Project-3-Python-Essentials-)
-    - [https://bmw-click-and-collect.herokuapp.com/](https://bmw-click-and-collect.herokuapp.com/)
----
-## **Table of Contents**
-- [Introduction](https://github.com/Joha-will/Portfolio-Project-3-Python-Essentials-#introduction)
-- [Technical Design](https://github.com/Joha-will/Portfolio-Project-3-Python-Essentials-#technical-design)
-    - Flow Chart
-- [How to use](https://github.com/Joha-will/Portfolio-Project-3-Python-Essentials-#how-to-use)
-- [User Experience (UX)](https://github.com/Joha-will/Portfolio-Project-3-Python-Essentials-#user-experience-ux)
-    - Target Audience
-    - User Stories
-    - Site owner goals
-- [Features](https://github.com/Joha-will/Portfolio-Project-3-Python-Essentials-#features)
-- [Technologies Used](https://github.com/Joha-will/Portfolio-Project-3-Python-Essentials-#technologies-used)
-    - Frameworks and Tools
-- [Testing](https://github.com/Joha-will/Portfolio-Project-3-Python-Essentials-#testing)
-    - Bugs and Errors found
-    - Solved Bugs
-    - Remaining Bugs
-    - Validator Testing
-- [Deployment](https://github.com/Joha-will/Portfolio-Project-3-Python-Essentials-#deployment)
-    - Using GitHub and GitPod
-    - Forking the GitHub Repository
-    - Deployment to Heroku
-    - Creating a Heroku account
-    - Configuring settings Heroku
-    - Deploy section
-- [Credits](https://github.com/Joha-will/Portfolio-Project-3-Python-Essentials-#credits)
-    - Code
-    - Content
-    - Acknowledgments
+
 ---
 
 
