@@ -652,6 +652,7 @@ I also found youtube videos that demonstrated and explained how to implement cer
 - [Very Academy](https://www.youtube.com/@veryacademy)
 
 
+
 These online resources were really helpful when I needed to refamiliarize myself with a specific topic or syntax. They were really education as well.
 
 - [Code Institute](https://codeinstitute.net/)
