@@ -646,7 +646,11 @@ Head back over to Heroku and go to Config Vars
 
 **Code**
 
-I also found a youtube videos that demonstrated how to implement certain functionalities. Code was used from some the websites and the videos. A link to the websites and the videos can be found below. 
+I also found youtube videos that demonstrated and explained how to implement certain functionalities which was really helpful. The ones that was really helpful are listed below:
+- [Dennis Ivy](https://www.youtube.com/@DennisIvy)
+
+- [Very Academy](https://www.youtube.com/@veryacademy)
+
 
 These online resources were really helpful when I needed to refamiliarize myself with a specific topic or syntax. They were really education as well.
 
@@ -667,7 +671,7 @@ These online resources were really helpful when I needed to refamiliarize myself
 - Code Institute - I want to say thank you to Code Institute for the support and resources they have provided which facilitated me throughtout the development of this project.
 - CI Slack Community - I want to say thank you to the Code Institute Slack community which had alot of supportive content about the modules and coding challenges.
 
-I want to say thank you to my family and friend who have supported and helped me throughout the development of this project.
+I want to say thank you to my family and friends who have supported and helped me throughout the development of this project.
 
 Finally, thank you for viewing this project and I hope you like it!
 
