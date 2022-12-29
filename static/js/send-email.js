@@ -9,7 +9,7 @@ function sendMail(contactUs) {
                 if (response.status == 200) {
                    $(".my-modal").modal('toggle');
                    $('.modal-title').html(`Thank you for your email!`);
-                   $('.modal-body').html('<p>A member of staff would be in contact with you shortly. Your email/feedbacks are important to us here at active-spring.</p>');
+                   $('.modal-body').html('<p>A staff member will be in touch with you soon. We value your email and feedback at active-spring.</p>');
                    $("#change-color").addClass("bg-green");
                 }
             },

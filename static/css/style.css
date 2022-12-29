@@ -31,6 +31,10 @@ a:link {
     opacity: 0.9;
 }
 
+.btn-margin {
+    margin-right: solid white 1px;
+}
+
 /** -------------------------------------NavBar **/
 .nav-colour {
     background-color: hsl(0, 0%, 85%);
@@ -364,6 +368,7 @@ hr.cl-black {
 }
 
 /**------------------ Endof colours **/
+
 
 
 /*---------------------------- Media queries **/
