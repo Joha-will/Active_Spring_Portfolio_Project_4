@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from .models import Booking
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.contrib import messages
 from bookings.forms import CustomerForm
 
@@ -10,25 +11,28 @@ def index_page(request):
     return render(request, 'bookings/index.html')
 
 
+@login_required
 def booking_home(request):
-    customer = Booking.objects.all()
     context = {
-        'customers': customer,
+        'customers': customer
     }
     return render(request, 'bookings/booking.html', context)
 
 
 @login_required
-def create_booking(request, **kwags):
+def create_booking(request):
     form = CustomerForm()
     if request.method == 'POST':
         form = CustomerForm(request.POST)
         if form.is_valid():
+            form.instance.user = request.user
             form.save()
             messages.add_message(
                 request, messages.SUCCESS,
                 'Your booking has been successfully created!')
             return redirect(reverse('bookings:booking'))
+        else:
+            form = CustomerForm()
     context = {'form': form}
     return render(request, 'bookings/create-booking.html', context)
 

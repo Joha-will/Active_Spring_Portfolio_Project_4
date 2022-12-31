@@ -56,7 +56,10 @@ INSTALLED_APPS = [
     'bookings',
     'webpages',
     'phonenumber_field',
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 SITE_ID = 1
 
