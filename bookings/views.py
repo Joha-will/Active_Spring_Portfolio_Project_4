@@ -11,21 +11,19 @@ def index_page(request):
     return render(request, 'bookings/index.html')
 
 
-@login_required
 def booking_home(request):
+    customer = Booking.objects.all()
     context = {
         'customers': customer
     }
     return render(request, 'bookings/booking.html', context)
 
 
-@login_required
 def create_booking(request):
     form = CustomerForm()
     if request.method == 'POST':
         form = CustomerForm(request.POST)
         if form.is_valid():
-            form.instance.user = request.user
             form.save()
             messages.add_message(
                 request, messages.SUCCESS,

@@ -2,6 +2,8 @@
 
 {% block title %} Active-Spring | Create Booking {% endblock%}
 
+{%load crispy_forms_tags %}
+
 {% block content %}
 <div class="container mb-auto">
     <div class="row d-flex align-items-center p-4">
@@ -13,7 +15,7 @@
 
                 <!-- Security token -->
                 {% csrf_token %}
-                {{form.as_p}}
+                {{ form|crispy }}
                 <input  type="submit" class="btn enquiry-btn p-1 w-auto" value="Making Booking">
             </form>
         </div>
