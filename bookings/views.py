@@ -1,26 +1,21 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
+
 from .models import Booking
+
 from django.contrib.auth.decorators import login_required
+
 from django.contrib.auth.models import User
+
 from django.contrib.auth import get_user_model
+
 from django.contrib import messages
-from bookings.forms import CustomerForm
+
+from .forms import CustomerForm
 
 
 def index_page(request):
 
     return render(request, 'bookings/index.html')
-
-
-def booking_home(request):
-
-    customer = Booking.objects.all()
-
-    context = {
-        'customers': customer
-    }
-
-    return render(request, 'bookings/booking.html', context)
 
 
 def create_booking(request):
@@ -35,7 +30,7 @@ def create_booking(request):
 
             customer = form.save(commit=False)
 
-            customer.full_name = request.user
+            customer.user = request.user
 
             customer.save()
 
@@ -48,6 +43,15 @@ def create_booking(request):
     context = {'form': form}
 
     return render(request, 'bookings/create-booking.html', context)
+
+
+def booking_home(request):
+
+    customer = Booking.objects.all()
+
+    context = {'customers': customer}
+
+    return render(request, 'bookings/booking.html', context)
 
 
 def update_booking(request, booking_id):
