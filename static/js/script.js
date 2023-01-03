@@ -1,4 +1,4 @@
-/** Js for signing up to make bookings */
+/* Modal trigger for users Sign in or Sign up to make bookings */
 
 $(document).ready(function(){
     setTimeout(() => {
