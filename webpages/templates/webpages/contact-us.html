@@ -5,52 +5,84 @@
 {% block content %}
 
 <div class="container-fluid contact-bg-image mb-auto">
-    <div class="row">
-        <div class="col-lg-4 mt-4 ml-auto">
-            <h2> Contact Us</h2>
-            <hr class="cl-black">
-            <small>If you have any enquires, please fill out the form and we would be happy to help.</small>
-            <div class="col-lg-10 col-md-5 col-sm-12 m-auto p-0">
-                <div class="text-center p-3 home-images">
-                    <img src="https://s9.gifyu.com/images/raj-rana-ttzU0sZmkpA-unsplash.jpg"
-                        alt="Image of a little girl splashing in a pool.">
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-5 con-form">
-            <form onsubmit="return sendMail(this);" method="POST">
-                {% csrf_token %}
-                <label for="fullname">Name</label>
-                <input type="text" name="name" class="form-control" id="fullname" placeholder="Enter your full name"
-                    required>
-                <label for="email">Email</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="email@example.com"
-                    required>
-                <label for="commentbox">Enquiry or Comment</label>
-                <textarea class="form-control" name="commentbox" id="commentbox" rows="10" required></textarea>
-                <button type="submit" class="btn enquiry-btn p-1"> Enquire Now</button>
-            </form>
-        </div>
-        <!-- Modal -->
-        <div class="modal fade my-modal" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header grad">
-                        <h5 class="modal-title" id="staticBackdropLabel">"</h5>
-                    </div>
-                    <div class="modal-body grad">
-                    </div>
-                    <div id="change-color" class="modal-footer">
-                        <a href="{% url 'bookings:index' %}"
-                            class=" nav-link navbar-nav p-2 return-home-btn ml-1  d-inline text-center">Return Back
-                            Home Page</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
+    <div class="row">
+
+        <div class="col-lg-4 mt-4 ml-auto">
+
+            <h2> Contact Us</h2>
+
+            <hr class="cl-black">
+
+            <small>If you have any enquires, please fill out the form and we would be happy to help.</small>
+
+            <div class="col-lg-10 col-md-5 col-sm-12 m-auto p-0">
+
+                <div class="text-center p-3 home-images">
+
+                    <img src="https://s9.gifyu.com/images/raj-rana-ttzU0sZmkpA-unsplash.jpg" alt="Image of a little girl splashing in a pool.">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-5  con-form">
+
+            <form onsubmit="return sendMail(this);" method="POST">
+
+                {% csrf_token %}
+
+                <label for="fullname">Name</label>
+
+                <input type="text" name="name" class="form-control" id="fullname" placeholder="Enter your full name" required>
+
+                <label for="email">Email</label>
+
+                <input type="email" name="email" class="form-control" id="email" placeholder="email@example.com" required>
+
+                <label for="commentbox">Enquiry or Comment</label>
+
+                <textarea class="form-control" name="commentbox" id="commentbox" rows="10" required></textarea>
+
+                <button type="submit" class="btn enquiry-btn p-1 w-auto"> Enquire Now</button>
+
+            </form>
+
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade my-modal" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+
+                    <div class="modal-header grad">
+
+                        <h5 class="modal-title" id="staticBackdropLabel">"</h5>
+
+                    </div>
+
+                    <div class="modal-body grad">
+
+                    </div>
+
+                    <div id="change-color" class="modal-footer">
+
+                        <a href="{% url 'bookings:index' %}" class=" nav-link navbar-nav p-2 return-home-btn ml-1  d-inline text-center">Return Home </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 {% endblock %}

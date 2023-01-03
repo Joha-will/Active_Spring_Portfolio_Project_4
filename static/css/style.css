@@ -360,7 +360,6 @@ hr.cl-black {
     color: #1E1E1E;
   }
 
-
 .bg-blue {
     background-color: #17a2b8;
 }
@@ -380,6 +379,13 @@ hr.cl-black {
     #hide {
         display: none;
     }
+    .con-form {
+        background-color: hsl(0, 0%, 85%);
+        height:auto;
+        margin: 15px;
+        box-shadow: 0 0 5px #001435;
+        border-radius: 10px;
+    }
 }
 
 @media screen and (max-width:400px) {
@@ -387,10 +393,8 @@ hr.cl-black {
         font-size: 1.5rem;
     
     }
+
 }
-
-
-
 
 
 /*---------------------------- Responsive table **/
