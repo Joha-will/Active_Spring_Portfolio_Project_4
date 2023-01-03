@@ -1,20 +1,28 @@
 {% load static %}
 
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>{% block title %} Active-Spring swimming pool {% endblock%}</title>
+
     <!--Boostrap CSS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
     <!--Personal CSS-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
     <!--Fontawesome kit-->
     <script src="https://kit.fontawesome.com/95bc93f676.js" crossorigin="anonymous"></script>
+
     <!--EmailJs script-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
@@ -29,103 +37,171 @@
 <body>
     <!-- Header -->
     <header>
+
         <nav class="navbar navbar-expand-lg navbar-light nav-colour">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+
                 <span class="navbar-toggler-icon"></span>
+
             </button>
-            <a href="{% url 'bookings:index'%}" class=" navbar-brand the-logo mb-0 top-fixed"> Active<i
-                    class="fa-solid fa-bolt"></i>Spring</a>
+
+            <a href="{% url 'bookings:index'%}" class=" navbar-brand the-logo mb-0 top-fixed"> Active<i class="fa-solid fa-bolt"></i>Spring</a>
+
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+
                     <li class="nav-item active">
-                        <a href="{% url 'bookings:booking' %}" class="nav-link hvr-underline-from-center">Bookings<span
-                                class="sr-only">(current)</span></a>
+
+                        <a href="{% url 'bookings:index' %}" class="nav-link hvr-underline-from-center">Home<span class="sr-only">(current)</span></a>
+
                     </li>
+
                     <li class="nav-item active">
-                        <a href="{% url 'webpages:sauna-steam' %}" class="nav-link hvr-underline-from-center">Sauna and
-                            Steam</a>
+
+                        <a href="{% url 'bookings:booking' %}" class="nav-link hvr-underline-from-center">Bookings<span class="sr-only">(current)</span></a>
+
                     </li>
+
                     <li class="nav-item active">
-                        <a href="{% url 'webpages:contact-us' %}" class="nav-link hvr-underline-from-center">Contact
-                            Us</a>
+
+                        <a href="{% url 'webpages:sauna-steam' %}" class="nav-link hvr-underline-from-center">Sauna and Steam</a>
+
                     </li>
+
+                    <li class="nav-item active">
+                        
+                        <a href="{% url 'webpages:contact-us' %}" class="nav-link hvr-underline-from-center">Contact Us</a>
+
+                    </li>
+
                     {% if user.is_authenticated %}
+
                     <li class="nav-item active">
-                        <a href="{% url 'account_logout' %}" class="nav-link hvr-underline-from-center d-lg-none">Sign
-                            Out</a>
+
+                        <a href="{% url 'account_logout' %}" class="nav-link hvr-underline-from-center d-lg-none">Sign Out</a>
+
                     </li>
+
                     {% else %}
+
                     <li class="nav-item active">
-                        <a href="{% url 'account_login' %}" class="nav-link hvr-underline-from-center d-lg-none">Sign
-                            In</a>
+
+                        <a href="{% url 'account_login' %}" class="nav-link hvr-underline-from-center d-lg-none">Sign In</a>
+
                     </li>
+
                     <li class="nav-item active">
-                        <a href="{% url 'account_signup' %}" class="nav-link hvr-underline-from-center d-lg-none">Sign
-                            Up</a>
+
+                        <a href="{% url 'account_signup' %}" class="nav-link hvr-underline-from-center d-lg-none">Sign Up</a>
+
                     </li>
+                    
                     {% endif %}
                 </ul>
+
                 <div id="hide">
+
                     {% if user.is_authenticated %}
-                    <a href="{% url 'account_logout' %}"
-                        class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign Out</a>
+
+                    <a href="{% url 'account_logout' %}" class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign Out</a>
+
                     {% else %}
-                    <a href="{% url 'account_login' %}"
-                        class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign In</a>
-                    <a href="{% url 'account_signup' %}"
-                        class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign Up</a>
+
+                    <a href="{% url 'account_login' %}" class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign In</a>
+
+                    <a href="{% url 'account_signup' %}" class=" nav-link navbar-nav p-2 register-btn ml-1  d-inline text-center">Sign Up</a>
+
                     {% endif%}
+
                 </div>
+
             </div>
+
         </nav>
+
         <div class="container">
+
             <div class="row">
+
                 <div class="col-md-8 offset-md-2 text-center">
+
                     {% for message in messages %}
+
                     <div class="alert {{ message.tags }} alert dismissable fade show" id="msg" role="alert">
+
                         {{ message | safe }}
+
                     </div>
+
                     {% endfor %}
+
                 </div>
+
             </div>
+
         </div>
+
     </header>
+
     <!-- / .Header -->
+
     {% block content %}
+
     <!-- Content goes here! -->
+
     {% endblock content %}
+
     <!-- Footer -->
     <footer class="container-fluid mt-3">
+
         <div class="row">
+
             <div class="mr-auto d-block p-3">
+
                 <h4 class="text-center">Our Location</h4>
+
                 <hr class="mt-0 cl-black">
-                <p>
-                    32 Active Spring Road, Newforest, MO30 4HT
-                </p>
+
+                <p> Active Spring Road, Newforest, MO30 4HT </p>
+
             </div>
+
             <div class="ml-auto d-block p-3">
+
                 <h4 class="text-center">Our Social</h4>
+
                 <hr class="mt-0 cl-black">
+
                 <div class="social-media">
-                    <a href="https://www.instagram.com/" target="_blank" class="foot-link ml-2"><i
-                            class="fa-brands fa-square-instagram hvr-bounce-in"></i></a>
-                    <a href="https://en-gb.facebook.com/" target="_blank" class="foot-link ml-2"><i
-                            class="fa-brands fa-square-facebook hvr-bounce-in"></i></a>
-                    <a href="https://www.linkedin.com/in/joha-wilson-5075a8249/s" target="_blank"
-                        class="foot-link ml-2"><i class="fa-brands fa-linkedin hvr-bounce-in"></i></a>
-                    <a href="https://github.com/Joha-will?tab=repositories" target="_blank" class="foot-link ml-2"><i
-                            class="fa-brands fa-github hvr-bounce-in"></i></a>
+
+                    <a href="https://www.instagram.com/" target="_blank" class="foot-link ml-2"><i class="fa-brands fa-square-instagram hvr-bounce-in"></i></a>
+
+                    <a href="https://en-gb.facebook.com/" target="_blank" class="foot-link ml-2"><i class="fa-brands fa-square-facebook hvr-bounce-in"></i></a>
+
+                    <a href="https://www.linkedin.com/in/joha-wilson-5075a8249/s" target="_blank" class="foot-link ml-2"><i class="fa-brands fa-linkedin hvr-bounce-in"></i></a>
+
+                    <a href="https://github.com/Joha-will?tab=repositories" target="_blank" class="foot-link ml-2"><i class="fa-brands fa-github hvr-bounce-in"></i></a>
+
                 </div>
+
             </div>
+
         </div>
+
         <hr class="mt-0 cl-black">
+
         <div class="text-center">
+
             <small>&copy; Copyright 2020. Joha Wilson. This project is made for educational purposes only. No commercial revenue is generated from the project.</small>
+
         </div>
+        
     </footer>
     <!--/ .Footer-->
+
+    <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -135,8 +211,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
     </script>
+
+    <!-- Personal JS -->
     <script src="{% static 'js/send-email.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
+
+    <!-- Timer for displayed messages -->
     <script>
         setTimeout(function () {
             let messages = document.getElementById("msg");
@@ -144,6 +224,7 @@
             alert.close();
         }, 3000);
     </script>
+
 </body>
 
 </html>
