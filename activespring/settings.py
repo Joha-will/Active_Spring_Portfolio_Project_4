@@ -32,7 +32,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = "DEV" in os.environ
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['active-spring.herokuapp.com', 'localhost']
@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'bookings',
     'webpages',
     'phonenumber_field',
+
     'crispy_forms',
 ]
 
