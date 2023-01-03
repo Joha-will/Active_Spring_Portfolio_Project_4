@@ -1,7 +1,11 @@
 from django.db import models
+
 from django.contrib.auth.models import User
+
 from phonenumber_field.modelfields import PhoneNumberField
+
 from django.core.validators import MaxValueValidator, MinValueValidator
+
 import datetime
 
 pool_timings = (
@@ -20,23 +24,26 @@ pool_timings = (
 pool_status = (
 
     ('Pending', 'Pending'),
+
     ('Confirmed', 'Confirmed'),
+
     (
         'Rejected, try booking on a different hour',
-        'Rejected, try booking on a different hour'),
+        'Rejected, try booking on a different hour',
+    ),
 )
 
 
 class Booking(models.Model):
     "The booking model"
-    
+
     booking_id = models.AutoField(primary_key=True)
 
     name = models.CharField(max_length=200, blank=False, default="")
 
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='customer', null=True)
-  
+
     email = models.EmailField(max_length=254)
 
     no_of_persons = models.IntegerField(

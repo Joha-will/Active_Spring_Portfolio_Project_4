@@ -47,7 +47,9 @@ def create_booking(request):
 
 def booking_home(request):
 
-    customer = Booking.objects.all()
+    current_user = request.user.id
+
+    customer = Booking.objects.all().filter(user=current_user)
 
     context = {'customers': customer}
 

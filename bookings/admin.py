@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from .models import Booking
 
 
@@ -12,7 +13,7 @@ class BookingAdmin(admin.ModelAdmin):
         'approved', 'booked_on', 'booking_status')
 
     search_fields = ('user', 'email')
-    
+
     actions = ['approve_bookings']
 
     def approve_bookings(self, request, queryset):

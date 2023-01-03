@@ -1,5 +1,7 @@
 from django.forms import ModelForm, EmailInput, NumberInput, TextInput
+
 from django import forms
+
 from bookings.models import Booking
 
 
