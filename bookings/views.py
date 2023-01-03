@@ -6,8 +6,6 @@ from django.contrib.auth.decorators import login_required
 
 from django.contrib.auth.models import User
 
-from django.contrib.auth import get_user_model
-
 from django.contrib import messages
 
 from .forms import CustomerForm
@@ -18,6 +16,7 @@ def index_page(request):
     return render(request, 'bookings/index.html')
 
 
+@login_required(login_url="account_login")
 def create_booking(request):
 
     form = CustomerForm()
@@ -56,6 +55,7 @@ def booking_home(request):
     return render(request, 'bookings/booking.html', context)
 
 
+@login_required(login_url="account_login")
 def update_booking(request, booking_id):
 
     customer = get_object_or_404(Booking, booking_id=booking_id)
