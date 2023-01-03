@@ -11,13 +11,18 @@ from django.contrib import messages
 from .forms import CustomerForm
 
 
+# Home page view
+
 def index_page(request):
 
     return render(request, 'bookings/index.html')
 
 
+# Create booking view
+
 @login_required(login_url="account_login")
 def create_booking(request):
+    """ This view gives users the ability to create bookings"""
 
     form = CustomerForm()
 
@@ -44,7 +49,10 @@ def create_booking(request):
     return render(request, 'bookings/create-booking.html', context)
 
 
+# Booking home view
+
 def booking_home(request):
+    """ This view give users the ability to view their bookings"""
 
     current_user = request.user.id
 
@@ -55,8 +63,11 @@ def booking_home(request):
     return render(request, 'bookings/booking.html', context)
 
 
+# Update booking view
+
 @login_required(login_url="account_login")
 def update_booking(request, booking_id):
+    """ This view gives users the ability to update their bookings"""
 
     customer = get_object_or_404(Booking, booking_id=booking_id)
 
@@ -80,8 +91,11 @@ def update_booking(request, booking_id):
 
     return render(request, 'bookings/update-booking.html', context)
 
+# Delete booking view
+
 
 def delete_booking(request, booking_id):
+    """ This view gives users the ability to delete their bookings"""
 
     customer = get_object_or_404(Booking, booking_id=booking_id)
 
