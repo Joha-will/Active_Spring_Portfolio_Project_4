@@ -8,52 +8,81 @@ from bookings.forms import CustomerForm
 
 
 def index_page(request):
+
     return render(request, 'bookings/index.html')
 
 
 def booking_home(request):
+
     customer = Booking.objects.all()
+
     context = {
         'customers': customer
     }
+
     return render(request, 'bookings/booking.html', context)
 
 
 def create_booking(request):
+
     form = CustomerForm()
+
     if request.method == 'POST':
+
         form = CustomerForm(request.POST)
+
         if form.is_valid():
-            form.save()
+
+            customer = form.save(commit=False)
+
+            customer.full_name = request.user
+
+            customer.save()
+
             messages.add_message(
                 request, messages.SUCCESS,
                 'Your booking has been successfully created!')
+
             return redirect(reverse('bookings:booking'))
-        else:
-            form = CustomerForm()
+
     context = {'form': form}
+
     return render(request, 'bookings/create-booking.html', context)
 
 
 def update_booking(request, booking_id):
+
     customer = get_object_or_404(Booking, booking_id=booking_id)
+
+    form = CustomerForm(instance=customer)
+
     if request.method == 'POST':
+
         form = CustomerForm(request.POST, instance=customer)
+
         if form.is_valid():
+
             form.save()
+
             messages.add_message(
                 request, messages.SUCCESS,
                 'Your booking has been successfully updated!')
+
             return redirect(reverse('bookings:booking'))
-    form = CustomerForm(instance=customer)
+
     context = {'form': form}
+
     return render(request, 'bookings/update-booking.html', context)
 
 
 def delete_booking(request, booking_id):
+
     customer = get_object_or_404(Booking, booking_id=booking_id)
+
     customer.delete()
+
     messages.add_message(
         request, messages.SUCCESS,
         'Your booking was successfully cancelled!')
+
     return redirect(reverse('bookings:booking'))

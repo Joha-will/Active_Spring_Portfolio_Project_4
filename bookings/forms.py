@@ -8,10 +8,15 @@ class DateInput(forms.DateInput):
 
 
 class CustomerForm(forms.ModelForm):
+
     class Meta:
+
         model = Booking
+
         fields = '__all__'
-        exclude = ['booked_on', 'approved', 'booking_status', 'full_name']
+
+        exclude = ['booked_on', 'approved', 'booking_status', 'user']
+
         widgets = {
             'booking_date': DateInput(),
             'email': EmailInput(attrs={

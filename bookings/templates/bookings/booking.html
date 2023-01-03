@@ -27,7 +27,7 @@
               href="{% url 'bookings:update' customer.booking_id %} "> Update
               booking</a></li>
           <li class="list-group-item bg-danger"><a href="" class="text-dark" data-toggle="modal"
-              data-target="#staticBackdrop">Delete
+              data-target="#staticBackdrop">Cancel
               Booking </a></li>
         </ul>
         <ul class="list-group w-auto text-dark">
@@ -41,7 +41,7 @@
             <h4>Email</h4>{{customer.email}}
           </li>
           <li class="list-group-item list-group-item-secondary">
-            <h4>No. Of Perosn</h4>{{customer.no_of_persons}}
+            <h4>No. of Perosns</h4>{{customer.no_of_persons}}
           </li>
           <li class="list-group-item list-group-item-light text-dark">
             <h4>Booking Time</h4>{{customer.booking_time}}
