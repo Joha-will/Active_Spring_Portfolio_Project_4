@@ -1,25 +1,38 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
-{% block title %} Active-Spring | Update Booking {% endblock%}
-
-{%load crispy_forms_tags %}
+{% block title %} Active-Spring | Update Booking {% endblock %}
 
 {% block content %}
+
+{% load crispy_forms_tags %}
+
 <div class="container mb-auto">
+
     <div class="row d-flex align-items-center p-4">
+
         <div class="col-lg-12 m-auto w-100">
-            <h1 class="text-center"> Update Booking</h1>
+
+            <h4 class="text-center"> Update Booking</h4>
+
         </div>
+
         <div class="col-md-8 mt-3 offset-md-2 con-form">
 
             <form method="POST" class="p-3 w-100">
 
                 <!-- Security token -->
                 {% csrf_token %}
+
                 {{ form|crispy }}
+
                 <input  type="submit" class="btn enquiry-btn p-1 w-auto" value="Update Booking">
+
             </form>
+
         </div>
+
     </div>
+
 </div>
+
 {% endblock content %}

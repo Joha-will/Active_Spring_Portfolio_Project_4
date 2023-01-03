@@ -366,7 +366,6 @@ hr.cl-black {
 .bg-blue {
     background-color: #17a2b8;
 }
-
 /**------------------ Endof colours **/
 
 
@@ -388,8 +387,13 @@ hr.cl-black {
 @media screen and (max-width:400px) {
     .the-logo {
         font-size: 1.5rem;
+    
     }
 }
+
+
+
+
 
 /*---------------------------- Responsive table **/
 
