@@ -27,6 +27,6 @@ class CustomerForm(forms.ModelForm):
                 'placeholder': '+44XXXXXXXXXX'
             }),
             'name': TextInput(attrs={
-                'placeholder': 'Name'
+                'placeholder': 'Full Name'
             }),
         }

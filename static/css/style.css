@@ -32,7 +32,7 @@ a:link {
 }
 
 .btn-margin {
-    margin-right: solid white 1px;
+    margin-right: 1px;
 }
 
 /** -------------------------------------NavBar **/
@@ -363,6 +363,11 @@ hr.cl-black {
 
 .bg-blue {
     background-color: #17a2b8;
+}
+
+.red-btn {
+
+    background-color: red;
 }
 /**------------------ Endof colours **/
 
