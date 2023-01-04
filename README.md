@@ -217,7 +217,7 @@ Use the link below to view the website's wireframes.
 **Logo:** 
 - This website has a logo which can be seen across all pages and it is full responsive. Click the link below to view the website logo.
 
-[Link to website Logo](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/wb-logo.png)
+[Image of website's Logo](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/wb-logo.png)
 
 **Navigation Bar:**
 - Every page has access to the Navbar, and links to all pages of the website. This navbar is fully responsive in all resolutions.
@@ -228,9 +228,9 @@ Use the link below to view the website's wireframes.
 
 When a user is authenticated, the Nav-bar status changes from Sign In and Sign Up to Sign out both on mobile and desktop view. So users are able to Sign In, Sign Out or Sign Up on different types of resolutions.
 
-[Image of Nav-bar Status]()
+[Image of Nav-bar Status](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/navbarstatus.png)
 
-[Mobile View Nav-bar Status]()
+[Image of Mobile View Nav-bar Status](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/mobilenavbarstatus.png)
 
 
 **Pool Opening Hours Tabel**
@@ -268,7 +268,7 @@ When a user is authenticated, the Nav-bar status changes from Sign In and Sign U
 
 - The Contact Us page has a Modal which gets toggled when a user submit's the enquiry form successfully which displays a message to the user, then redirects them back to the home page.
 
-[Image of Contact Us Page Modal]()
+[Image of Contact Us Page Modal](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/contactmodal.png)
 
 
 **Create booking**
