@@ -832,9 +832,9 @@ These online resources were really helpful when I needed to refamiliarize myself
 
 ### Acknowledgments
 
-- Harry Dhillon - I want to say thank you to my mentor for his time and help throughout the developement of this project.
-- Code Institute - I want to say thank you to Code Institute for the support and resources they have provided which facilitated me throughtout the development of this project.
-- CI Slack Community - I want to say thank you to the Code Institute Slack community which had alot of supportive content about the modules and coding challenges.
+- Harry Dhillon - I want to say a massive thank you to my mentor for his time and guidance throughout the developement of this project.
+- Code Institute - I would want to express my gratitude to Code Institute for the help and resources you have given me while I've developed this project. Your support has been really appreciated.
+- CI Slack Community - I want to say thank you to the Code Institute Slack community which had alot of supportive content at all times.
 
 I want to say thank you to my family and friends who have supported and helped me throughout the development of this project.
 
