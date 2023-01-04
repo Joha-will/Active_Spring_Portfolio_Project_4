@@ -17,8 +17,21 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+
+    # Admin panel URL
+
     path('admin/', admin.site.urls),
+
+    # Bookings app URLs
+
     path('', include('bookings.urls'), name="bookings_urls"),
+
+    # Webpages URLs
+
     path('webpages/', include('webpages.urls'), name='webpages_urls'),
+
+    # Accounts URLs
+
     path('accounts/', include('allauth.urls')),
+
 ]

@@ -13,5 +13,5 @@ urlpatterns = [
     # Sauna Steam URL
 
     path('sauna-steam/', views.SaunaSteam.as_view(), name='sauna-steam'),
-    
+
 ]

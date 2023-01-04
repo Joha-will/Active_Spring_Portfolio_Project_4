@@ -55,5 +55,5 @@ class TestViews(TestCase):
         self.assertRedirects(response, '/booking')
 
         current_customers = Booking.objects.filter(id=booking_id)
-        
+
         self.assertEqual(len(current_customers), 0)

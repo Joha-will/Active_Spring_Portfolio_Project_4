@@ -1,7 +1,7 @@
 # **Active-Spring Swimming Pool** 
 ![Screenshot 2022-12-21 at 02 15 52](https://user-images.githubusercontent.com/98041941/208894245-75c3027a-e7ce-451e-872b-78648fdc27f3.png)
 
-
+[Live Site](https://active-spring.herokuapp.com/)
 ---
 
 
@@ -46,11 +46,11 @@ My plan of action was to build and produce a website that would be the most usef
 
 - As a creator, I want the website to be easy to navigate.
 
-- As a creator, I want the allow users to create, view, update and delete bookings (CRUD) pool bookings.
+- As a creator, I want the allow users to create, read, update and delete bookings (CRUD) pool bookings.
 
 - As a creator,  I want admin to log in to access the website's backend when needed.
 
-- As a creator, I want to allow admins to create, view, update and delete bookings (CRUD) pool bookings.
+- As a creator, I want to allow admins to create, read, update and delete bookings (CRUD) pool bookings.
 
 - As a creator, I want provide admin with the ability to approve or reject bookings in order to effectively manage all bookings.
 
@@ -62,15 +62,25 @@ My plan of action was to build and produce a website that would be the most usef
 - As a user of the website, I want to have a way of contacting someone if I have any problems or questions.
 - As a user of the website, I want to have the option to create an account if I want to.
 - As a user of the website, I want to have the option to sign into my existing account.
-- As a user of the website, I want to ability to create, view, update and delete booking for the pool.
+- As a user of the website, I want to ability to create, read, update and delete booking for the pool.
 
-- As a user of the website, 
+### **Customer (Logged-in) stories**
+
+- As a logged-in user, I want the ability to make a bookings for swimming.
+- As a logged-in user, I want the ability to my bookings after I make one.
+- As a logged-in user, I want the ability to update my bookings if necessary.
+- As a logged-in user, I want the ability to cancel my bookings if necessary.
+- As a logged-in user, I want to be notified whenever I have logged-in successfully.
+- As a logged-in user, I want to be notified when I perform certain actions.
 
 ### **Site owner goals**
 - As the site owner I would like customer to have information that is clear and concise.
 - As the site owner I would like customer to have ability sign in if they have an existing account or able to sign up for an account.
-- As the site owner I would like customer to have ability make, view, update and delete their booking if required.
-- As the site owner I would like  customer to have ability make, view, update and delete their booking as well as the ability to approve or reject booking if required. 
+- As the site owner I would like customer to have ability create, read, update and delete their booking if required.
+- As the site owner I would like  customer to have ability create, read, update and delete their booking as well as the ability to approve or reject booking if required. 
+
+
+
 
 ---
 
@@ -121,19 +131,21 @@ or they create an accounts.
 
 The Booking Model is made up of the following fields:
 
-1. booking_id = This is an AutoField which creates a booking Id for each time some creates a booking,
-2. name = This is a CharField which takes in and displays a customer name.
-3. full_name = This is a ForeignKey which takes in and displays a customer full name
-4. email = This is an EmailField which takes a user email and displays a customer email.
-5. no_of_persons = This is an IntegerField which take in the number of people booking to swim.
+1. booking_id = This is an AutoField which creates a booking Id for all bookings created by customers.
+2. name = This is a CharField which takes in a customer name.
+3. user = This is a ForeignKey which takes in the User model, and is used to check the logged-in
+4. email = This is an EmailField which takes in customers emails.
+5. no_of_persons = This is an IntegerField which take in the number of people in a booking slot.
 6. booking_date = This is a DateField which allow customers a date to book swimming.
-7. booking_time = This is a CharField which gives the customers a list of times they can book their swimming on.
+7. booking_time = This is a CharField which gives the customers drop-down list of timings to booking their swimming.
 8. phone_number = This is a PhoneNumberField which takes in customers phone numbers.
-9. booking_status = This is a CharField which give displays customers booking status.
+9. booking_status = This is a CharField which displays customers booking status.
 10. booked_on = This is a DateTimeField which displays the date and time the customer made a booking.
 11. approved = This is a BooleanField which is used to approve/reject bookings.
 
 #### **Database Design**
+
+
 
 #### **Fonts**
 

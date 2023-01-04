@@ -21,6 +21,7 @@ if os.path.isfile('env.py'):
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
@@ -32,8 +33,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = "DEV" in os.environ
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+DEBUG = False
 
 ALLOWED_HOSTS = ['active-spring.herokuapp.com', 'localhost']
 

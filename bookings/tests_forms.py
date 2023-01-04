@@ -19,5 +19,5 @@ class TestCustomerForm(TestCase):
     def test_form_has_required_fields(self):
 
         form = CustomerForm()
-        
+
         self.assertEqual(form.Meta.exclude, ['booked_on', 'approved'])

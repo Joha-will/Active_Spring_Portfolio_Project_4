@@ -12,34 +12,34 @@
 
   <div class="row d-flex align-items-center p-4"></div>
 
-    <div class="col-lg-12 m-auto w-100">
+  <div class="col-lg-12 m-auto w-100">
 
-      <h2 class="text-center">{% trans "Sign Out" %}</h2>
+    <h2 class="text-center">{% trans "Sign Out" %}</h2>
 
-    </div>
+  </div>
 
-    <div class="col-md-4 m-auto text-center offset-md-2">
+  <div class="col-md-4 m-auto text-center offset-md-2">
 
-      <p>{% trans 'Are you sure you want to sign out?' %}</p>
+    <p>{% trans 'Are you sure you want to sign out?' %}</p>
 
-      <form method="post" action="{% url 'account_logout' %}">
+    <form method="post" action="{% url 'account_logout' %}">
 
-        {% csrf_token %}
+      {% csrf_token %}
 
-        {% if redirect_field_value %}
+      {% if redirect_field_value %}
 
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
 
-        {% endif %}
+      {% endif %}
 
-        <button class="enquiry-btn w-auto m-auto" type="submit">{% trans 'Sign Out' %}</button>
+      <button class="enquiry-btn w-auto m-auto" type="submit">{% trans 'Sign Out' %}</button>
 
-      </form>
-
-    </div>
+    </form>
 
   </div>
 
 </div>
+
+
 
 {% endblock %}
