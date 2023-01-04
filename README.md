@@ -168,7 +168,7 @@ The Booking Model is made up of the following fields:
 
 #### **Database Design**
 
-[Link to diagram of the Database](https://active-spring.herokuapp.com/) xxxxxxx
+<img width="1412" alt="Databaseshot" src="https://user-images.githubusercontent.com/98041941/210502820-6bd99776-5538-4eb4-a810-9336e6e1426d.png">
 
 #### **Fonts**
 
@@ -205,7 +205,7 @@ These wireframes were made during the planning stage to help me with the layout 
 
 Use the link below to view the website's wireframes.
 
-[Links websites Wireframes]() xxxxxxxxxxxxx
+[Link to website's Wireframes](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/assests/wireframes.md)
 
 
 ## **Surface**
@@ -216,12 +216,22 @@ Use the link below to view the website's wireframes.
 
 **Logo:** 
 - This website has a logo which can be seen across all pages and it is full responsive. Click the link below to view the website logo.
-[Desktop View]()
-[Mobile View]()
+
+[Image of website's Logo](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/wb-logo.png)
 
 **Navigation Bar:**
 - Every page has access to the Navbar, and links to all pages of the website. This navbar is fully responsive in all resolutions.
 ![Screenshot 2022-12-21 at 04 23 24](https://user-images.githubusercontent.com/98041941/208895295-9d3ce5d2-2e4e-4d2a-a883-2b97607e9cd1.png)
+
+
+**Nav-bar Status**
+
+When a user is authenticated, the Nav-bar status changes from Sign In and Sign Up to Sign out both on mobile and desktop view. So users are able to Sign In, Sign Out or Sign Up on different types of resolutions.
+
+[Image of Nav-bar Status](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/navbarstatus.png)
+
+[Image of Mobile View Nav-bar Status](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/mobilenavbarstatus.png)
+
 
 **Pool Opening Hours Tabel**
 - The Home page has a tabel which provides customer with the pool opening and closing hours.
@@ -229,51 +239,68 @@ Use the link below to view the website's wireframes.
 ![Screenshot 2022-12-21 at 04 24 10](https://user-images.githubusercontent.com/98041941/208895328-e34166a2-96d6-4782-8672-5ebda5626b48.png)
 
 **Footer**
+
 - The website footer can been seen across all pages of the website. The footer is made up of the website's copyrights information, pool address and the website's social media links.
-[Desktop View]()
-[Mobile View]()
+
+[Image of website's Footer](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/footershot.png)
 
 #### **Booking page**
 
 **Make booking**
+
 - Once a user has been authenticated, they can use the Make booking button to make a booking. If a user makes a booking, they have the ability to view the booking as well as updating or deleting the booking using the Update or Delete buttons.
-[Desktop View]()
-[Mobile View]()
+
+[Image of website's Booking page](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/bookingshot.png)
 
 **Sign In or Sign Up Modal**
 
 - The booking page has a Modal which gets toggled when a user is not authenticated. The Modal prompt users to Sign In or Sign Up for an account.
-[Desktop View]()
-[Mobile View]()
+
+[Image of Sign In/ Sign Up Modal](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/signinmodal.png)
 
 **Delete booking Modal**
 
 - The booking page has a Modal which gets toggles when a user tries to delete/cancel a booking. The Modal challenges the user by asking the user to confirm that they want to delete their booking or take the them back to the booking page.
-[Desktop View]()
-[Mobile View]()
+
+[Image of Delete booking Modal](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/deletebookingmodal.png)
+
+**Submit Contact Us Form Modal**
+
+- The Contact Us page has a Modal which gets toggled when a user submit's the enquiry form successfully which displays a message to the user, then redirects them back to the home page.
+
+[Image of Contact Us Page Modal](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/contactmodal.png)
+
 
 **Create booking**
 - The Create booking page has a booking form which allows customer to make a booking by filling out the form and submiting it.
-[Desktop View]()
-[Mobile View]()
+
+[Image of website's Create booking form](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/createbookingimg.png)
 
 **Update booking**
+
 - The Update booking page has a booking form which allows customers to update a booking by filling out the form and submiting it.
-[Desktop View]()
-[Mobile View]()
+
+[Image of website's Update booking form](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/updatebookingimg.png)
 
 **Contact us page**
-- The Contact us page has a form which alllows customers to send an email to the website if they have any problems or questions. When this form is submitted, it sends an email to the gmail account which was link using email.JS.
+- The Contact us page has a form which alllows customers to send an email to the website if they have any problems or questions.
 
-[Desktop View]()
-[Mobile View]()
+[Image of website's Contact Us form](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/contactusimg.png)
+
+**Google Account Linked with Email.JS**
+
+When the Contact Us form filled out and submitted successfully, it sends an email to the gmail account which was link using email.JS.
+
+![gmailshot](https://user-images.githubusercontent.com/98041941/210506745-d37b584a-e3a9-4fc5-b247-6969a751a737.png)
 
 **Sauna Steam page**
 
 - The Sauna Steam page gives customers information about the pool's sauna and steam room facilities with supporting images.
 
-[Desktop View]()
-[Mobile View]()
+[Image of website's Sauna and Steam page](https://github.com/Joha-will/Active-Spring-Portfolio-Project-4-Full-Stack-Toolkit-/blob/main/static/images/saunasteamimg.png)
+
+
+
 ---
 
 ## **Technologies Used**
@@ -386,6 +413,7 @@ This project was tested manually by using the following methods:
 - All buttons are working and navigates to correct page.
 - Contact us page modal is working when a user submits the form.
 - Email get's send successfully to linked gmail account when the form is filled out correctly.
+- I ran 10 test submits before the final deployment to ensure the contact us form was working as it should.
 - The webpage is fully responsive which allows users to view and fill out the form on any resolution.
 - Tested all input fields by intentionally entering invalid data. For example:
     - Entering integers where strings are required and vice versa.
@@ -410,16 +438,15 @@ This project was tested manually by using the following methods:
 - Modal gets toggled on booking page if user is not authenticated.
 - Modal works when customers fills out and submit the contact us form.
 
+
+
 **Customer(Logged-in) Stories**
 
 - Users can only create a booking when they are logged-in.
 - Users have the ability to view their bookings once they are logged-in.
 - Users have the ability to update their bookings once they are logged-in.
 - Users have the ability to delete their bookings once they are logged-in.
-- When a user is logged-ing the nav-bar status changes from Sign in and Sign up to Sign out.
-
-[Desktop View]()
-[Mobile View]()
+- When a user is logged-in the nav-bar status changes from Sign in and Sign up to Sign out.
 
 
 
@@ -454,32 +481,57 @@ During the development of the project, the buildt in python extention in the wor
 I used Chrome developer tools to test the responsiveness of the website. The website was viewed on several different devices such as:
 
 -Desktop
+
 -Laptop
+
 -Iphone SE
+
 -Iphone XR
+
 -Iphone 12 Pro
+
 -Pixel 5
+
 -Samsung Galaxy 8+
+
 -Samsung Galaxy S20 Ultra
+
 -Ipad Air
+
 -Ipad Mini
+
 -Surface Pro 7
+
 -Surface Duo
+
 -Galaxy Fold
+
 -Samsung Galaxy A51/71
+
 -Nest Hub
+
 -Nest Hub Max
+
 -Iphone 6/7/8
+
 -phone 6/7/8 Plus
+
 -Iphone X
+
 -Ipad
+
 -Ipad Pro
 
 **Browser Testing**
+
 The website was tested in different browsers such as:
+
 - Firefox
+
 - Google Chrome
+
 - Safari
+
 - Opera.
 
 
@@ -805,9 +857,9 @@ These online resources were really helpful when I needed to refamiliarize myself
 
 ### Acknowledgments
 
-- Harry Dhillon - I want to say thank you to my mentor for his time and help throughout the developement of this project.
-- Code Institute - I want to say thank you to Code Institute for the support and resources they have provided which facilitated me throughtout the development of this project.
-- CI Slack Community - I want to say thank you to the Code Institute Slack community which had alot of supportive content about the modules and coding challenges.
+- Harry Dhillon - I want to say a massive thank you to my mentor for his time and guidance throughout the developement of this project.
+- Code Institute - I would want to express my gratitude to Code Institute for the help and resources you have given me while I've developed this project. Your support has been really appreciated.
+- CI Slack Community - I want to say thank you to the Code Institute Slack community which had alot of supportive content at all times.
 
 I want to say thank you to my family and friends who have supported and helped me throughout the development of this project.
 
