@@ -481,32 +481,57 @@ During the development of the project, the buildt in python extention in the wor
 I used Chrome developer tools to test the responsiveness of the website. The website was viewed on several different devices such as:
 
 -Desktop
+
 -Laptop
+
 -Iphone SE
+
 -Iphone XR
+
 -Iphone 12 Pro
+
 -Pixel 5
+
 -Samsung Galaxy 8+
+
 -Samsung Galaxy S20 Ultra
+
 -Ipad Air
+
 -Ipad Mini
+
 -Surface Pro 7
+
 -Surface Duo
+
 -Galaxy Fold
+
 -Samsung Galaxy A51/71
+
 -Nest Hub
+
 -Nest Hub Max
+
 -Iphone 6/7/8
+
 -phone 6/7/8 Plus
+
 -Iphone X
+
 -Ipad
+
 -Ipad Pro
 
 **Browser Testing**
+
 The website was tested in different browsers such as:
+
 - Firefox
+
 - Google Chrome
+
 - Safari
+
 - Opera.
 
 
