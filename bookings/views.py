@@ -98,50 +98,66 @@ def update_booking(request, booking_id):
     # Get booking_id that's pass in by url
     customer = get_object_or_404(Booking, booking_id=booking_id)
 
-    # pass customer as a instance into Customer form
-    form = CustomerForm(instance=customer)
+    if customer in request.user.customer.all():
 
-    # Check if request equal to POST
-    if request.method == 'POST':
+        # pass customer as a instance into Customer form
+        form = CustomerForm(instance=customer)
 
-        # Pass in the type request and the customer instance
-        form = CustomerForm(request.POST, instance=customer)
+        # Check if request equal to POST
+        if request.method == 'POST':
 
-        # check if the form is valid
-        if form.is_valid():
+            # Pass in the type request and the customer instance
+            form = CustomerForm(request.POST, instance=customer)
 
-            # save the form
-            form.save()
+            # check if the form is valid
+            if form.is_valid():
 
-            # Display successful message to user
-            messages.add_message(
-                request, messages.SUCCESS,
-                'Your booking has been successfully updated!')
+                # save the form
+                form.save()
 
-            # Redirect back to booking.html
-            return redirect(reverse('bookings:booking'))
+                # Display successful message to user
+                messages.add_message(
+                    request, messages.SUCCESS,
+                    'Your booking has been successfully updated!')
 
-    # Pass form into context dictionary
-    context = {'form': form}
+                # Redirect back to booking.html
+                return redirect(reverse('bookings:booking'))
 
-    # Return and render update-booking.html
-    return render(request, 'bookings/update-booking.html', context)
+        # Pass form into context dictionary
+        context = {'form': form}
+
+        # Return and render update-booking.html
+        return render(request, 'bookings/update-booking.html', context)
+
+    else:
+        messages.error(request, 'Sorry, you are not allow on this page!')
+
+        return redirect(reverse('bookings:index'))
 
 
 # Delete booking view
 
+@login_required(login_url="account_login")
 def delete_booking(request, booking_id):
     """ This view gives users the ability to delete their bookings"""
     # Get booking_id that's pass in by url
     customer = get_object_or_404(Booking, booking_id=booking_id)
 
-    # Delete booking_id from database
-    customer.delete()
+    if customer in request.user.customer.all():
 
-    # Display successful message to user
-    messages.add_message(
-        request, messages.SUCCESS,
-        'Your booking was successfully cancelled!')
+        # Delete booking_id from database
+        customer.delete()
 
-    # Redirect back to booking.html
-    return redirect(reverse('bookings:booking'))
+        # Display successful message to user
+        messages.add_message(
+            request, messages.SUCCESS,
+            'Your booking was successfully cancelled!')
+
+        # Redirect back to booking.html
+        return redirect(reverse('bookings:booking'))
+
+    else:
+
+        messages.error(request, 'Sorry, you are not allow on this page!')
+
+        return redirect(reverse('bookings:index'))
