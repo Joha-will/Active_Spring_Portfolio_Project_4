@@ -152,6 +152,7 @@ def delete_booking(request, booking_id):
         messages.error(request, 'Sorry, you need to be logged in.')
 
         return redirect(reverse('account_login'))
+
     # Get booking_id that's pass in by url
     customer = get_object_or_404(Booking, booking_id=booking_id)
 
