@@ -95,6 +95,12 @@ def booking_home(request):
 def update_booking(request, booking_id):
     """ This view gives users the ability to update their bookings"""
 
+    if not request.user.is_authenticated:
+
+        messages.error(request, 'Sorry, you need to be logged in.')
+
+        return redirect(reverse('account_login'))
+
     # Get booking_id that's pass in by url
     customer = get_object_or_404(Booking, booking_id=booking_id)
 
@@ -140,6 +146,12 @@ def update_booking(request, booking_id):
 @login_required(login_url="account_login")
 def delete_booking(request, booking_id):
     """ This view gives users the ability to delete their bookings"""
+
+    if not request.user.is_authenticated:
+
+        messages.error(request, 'Sorry, you need to be logged in.')
+
+        return redirect(reverse('account_login'))
     # Get booking_id that's pass in by url
     customer = get_object_or_404(Booking, booking_id=booking_id)
 
